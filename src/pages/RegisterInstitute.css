@@ -1,0 +1,2423 @@
+/* =========================================================
+   CERTIPORT ACADEMY
+   INSTITUTE REGISTRATION
+   ========================================================= */
+
+.register-page {
+  width: 100%;
+  height: calc(100vh - 76px);
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 43% 57%;
+  overflow: auto;
+  background: #f4f8fc;
+}
+
+/* =========================================================
+   LEFT BLUE PANEL
+   ========================================================= */
+
+.register-left {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 48px 48px;
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(0, 190, 255, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #06204a 0%,
+      #07579b 55%,
+      #078bd0 100%
+    );
+}
+
+/* LEFT CONTENT */
+
+.register-left-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+/* BADGE */
+
+.partner-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 30px;
+  background: rgba(0, 190, 255, 0.16);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+/* LEFT HEADING */
+
+.register-left h1 {
+  margin: 22px 0 0;
+  color: #ffffff;
+  font-size: clamp(34px, 3.2vw, 48px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1.3px;
+}
+
+.register-left h1 span {
+  color: #08d8ef;
+}
+
+/* LEFT DESCRIPTION */
+
+.register-left p {
+  max-width: 500px;
+  margin: 18px 0 0;
+
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   RIGHT WHITE PANEL
+   ========================================================= */
+
+.register-right {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 42px 58px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* HEADER */
+
+.register-header {
+  position: relative;
+}
+
+.register-header > span {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #7f8fa4;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.register-header h2 {
+  margin: 0;
+
+  color: #102a43;
+  font-size: clamp(30px, 2.6vw, 40px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.register-header h2 strong {
+  color: #087bc1;
+}
+
+.register-header p {
+  margin: 9px 0 0;
+
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   STEP PROGRESS
+   ========================================================= */
+
+.step-preview {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-top: 32px;
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.step > div {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 2px solid #d8e2ec;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #65758a;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.step span {
+  color: #74849a;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.step.active > div {
+  border-color: #087bc1;
+  background: #087bc1;
+  color: #ffffff;
+
+  box-shadow: 0 7px 18px rgba(8, 123, 193, 0.25);
+}
+
+.step.active span {
+  color: #087bc1;
+}
+
+/* CONNECTING LINES */
+
+.step-line {
+  flex: 1;
+
+  height: 2px;
+  margin-top: 20px;
+
+  background: #e2e9f0;
+}
+
+/* =========================================================
+   BASIC DETAILS
+   ========================================================= */
+
+.basic-details {
+  position: relative;
+
+  margin-top: 28px;
+  padding: 20px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #edf7fd 0%,
+      #f5faff 100%
+    );
+}
+
+.basic-details h3 {
+  margin: 0;
+
+  color: #102a43;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.basic-details > p {
+  margin: 4px 0 20px;
+
+  color: #728197;
+  font-size: 11px;
+}
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  color: #183b5d;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.form-field label::first-letter {
+  color: #183b5d;
+}
+
+.form-field input {
+  width: 100%;
+  height: 43px;
+
+  box-sizing: border-box;
+
+  padding: 0 13px;
+
+  border: 1px solid #d8e3ed;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #243b53;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  transition: all 0.2s ease;
+}
+
+.form-field input::placeholder {
+  color: #9baabc;
+}
+
+.form-field input:focus {
+  border-color: #087bc1;
+
+  box-shadow:
+    0 0 0 3px rgba(8, 123, 193, 0.08);
+}
+
+/* =========================================================
+   CONTINUE BUTTON
+   ========================================================= */
+
+.continue-button {
+  display: block;
+
+  margin: 25px 0 0 auto;
+
+  min-width: 130px;
+  height: 44px;
+
+  padding: 0 22px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #087bc1,
+    #07579d
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(8, 123, 193, 0.22);
+
+  transition: all 0.2s ease;
+}
+
+.continue-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 11px 25px rgba(8, 123, 193, 0.3);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .register-page {
+    grid-template-columns: 40% 60%;
+  }
+
+  .register-left {
+    padding: 40px 30px;
+  }
+
+  .register-right {
+    padding: 35px 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .register-page {
+    height: auto;
+    min-height: calc(100vh - 76px);
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .register-left {
+    min-height: 430px;
+  }
+
+  .register-right {
+    height: auto;
+    min-height: 650px;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-left {
+    padding: 32px 24px;
+  }
+
+  .register-left h1 {
+    font-size: 36px;
+  }
+
+  .register-right {
+    padding: 30px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-preview {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .step {
+    min-width: 100px;
+  }
+
+  .step-line {
+    min-width: 25px;
+  }
+}
+/* =========================================================
+   LEFT PANEL - FINAL DESIGN
+   ========================================================= */
+
+.register-left {
+  position: relative;
+  overflow: hidden;
+}
+
+/* LEFT CONTENT */
+
+.register-left-content {
+  position: relative;
+  z-index: 5;
+}
+
+/* BADGE */
+
+.partner-badge {
+  position: relative;
+  z-index: 6;
+}
+
+/* =========================================================
+   PARTNER BENEFITS
+   ========================================================= */
+
+.partner-benefits {
+  position: relative;
+  z-index: 6;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  width: 58%;
+  margin-top: 25px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-height: 42px;
+}
+
+.benefit-icon {
+  flex: 0 0 36px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-item h3 {
+  margin: 0 0 3px;
+
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.benefit-item p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   FEMALE IMAGE
+   ========================================================= */
+
+.register-person {
+  position: absolute;
+
+  right: -8px;
+  bottom: -2px;
+
+  z-index: 3;
+
+  width: 46%;
+  max-width: 300px;
+
+  pointer-events: none;
+}
+
+.register-person img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.register-tagline {
+  position: absolute;
+
+  left: 48px;
+  bottom: 92px;
+
+  z-index: 7;
+
+  color: #ffffff;
+
+  font-size: 17px;
+  line-height: 1.12;
+  font-weight: 600;
+
+  font-style: italic;
+}
+
+/* =========================================================
+   EMPOWERING CARD
+   ========================================================= */
+
+.empowering-card {
+  position: absolute;
+
+  left: 48px;
+  right: 48px;
+  bottom: 28px;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-height: 58px;
+  padding: 9px 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+
+  background: rgba(3, 46, 88, 0.78);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.20);
+
+  backdrop-filter: blur(8px);
+}
+
+.empowering-icon {
+  flex: 0 0 38px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.empowering-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.empowering-card strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.empowering-card span {
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   LAPTOP HEIGHT
+   ========================================================= */
+
+@media (max-height: 700px) and (min-width: 801px) {
+
+  .register-left {
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
+
+  .partner-benefits {
+    gap: 9px;
+    margin-top: 18px;
+  }
+
+  .benefit-item {
+    min-height: 36px;
+  }
+
+  .benefit-icon {
+    width: 31px;
+    height: 31px;
+    flex-basis: 31px;
+    font-size: 13px;
+  }
+
+  .register-person {
+    width: 43%;
+    max-width: 275px;
+  }
+
+  .register-tagline {
+    left: 48px;
+    bottom: 83px;
+    font-size: 15px;
+  }
+
+  .empowering-card {
+    bottom: 20px;
+    min-height: 52px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .partner-benefits {
+    width: 60%;
+  }
+
+  .register-person {
+    width: 38%;
+    right: 0;
+  }
+
+  .empowering-card {
+    left: 24px;
+    right: 24px;
+  }
+
+  .register-tagline {
+    left: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .partner-benefits {
+    width: 100%;
+  }
+
+  .register-person {
+    opacity: 0.35;
+    width: 45%;
+  }
+
+  .register-tagline {
+    bottom: 85px;
+    font-size: 15px;
+  }
+}
+/* =========================================================
+   PERMANENTLY REMOVE VERTICAL LINES
+   ========================================================= */
+
+.register-left .benefit-item::before,
+.register-left .benefit-item::after,
+.register-left .partner-benefits::before,
+.register-left .partner-benefits::after,
+.register-left .register-left-content::before,
+.register-left .register-left-content::after {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove any border-based divider from benefit items */
+.register-left .benefit-item {
+  border: none !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+/* =========================================================
+   LEFT PANEL - POLISHED FINAL
+   ========================================================= */
+
+.register-left {
+  position: relative;
+  height: 100%;
+  min-height: 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  padding: 42px 48px;
+
+  background:
+    radial-gradient(
+      circle at 88% 10%,
+      rgba(0, 198, 255, 0.30),
+      transparent 34%
+    ),
+    linear-gradient(
+      145deg,
+      #06204a 0%,
+      #07599e 58%,
+      #078bd0 100%
+    );
+
+  color: #ffffff;
+}
+
+/* Soft background circle */
+
+.register-left::after {
+  content: "";
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  right: -165px;
+  top: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 205, 255, 0.10);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.register-left-content {
+  position: relative;
+  z-index: 6;
+
+  width: 100%;
+  max-width: 500px;
+}
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.partner-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 15px;
+
+  border: 1px solid rgba(255,255,255,.30);
+  border-radius: 30px;
+
+  background: rgba(0,190,255,.14);
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.15px;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.register-left h1 {
+  margin: 18px 0 0;
+
+  max-width: 390px;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 3vw, 44px);
+  line-height: 1.06;
+
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.register-left h1 span {
+  color: #08d9ef;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.register-left p {
+  max-width: 445px;
+
+  margin: 16px 0 0;
+
+  color: rgba(255,255,255,.82);
+
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.partner-benefits {
+  position: relative;
+  z-index: 7;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+
+  width: 62%;
+
+  margin-top: 23px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-height: 39px;
+
+  border: none !important;
+}
+
+/* ICON */
+
+.benefit-icon {
+  flex: 0 0 34px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255,255,255,.30);
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.22),
+      rgba(255,255,255,.08)
+    );
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 14px rgba(0,0,0,.12);
+}
+
+/* BENEFIT TEXT */
+
+.benefit-item h3 {
+  margin: 0 0 2px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.benefit-item p {
+  margin: 0;
+
+  color: rgba(255,255,255,.68);
+
+  font-size: 9px;
+  line-height: 1.25;
+}
+
+/* =========================================================
+   FEMALE IMAGE
+   ========================================================= */
+
+.register-person {
+  position: absolute;
+
+  z-index: 5;
+
+  /*
+    Slightly shifted LEFT
+  */
+  right: 8px;
+
+  bottom: -1px;
+
+  width: 45%;
+
+  max-width: 285px;
+
+  pointer-events: none;
+}
+
+.register-person img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.register-tagline {
+  position: absolute;
+
+  left: 48px;
+  bottom: 91px;
+
+  z-index: 8;
+
+  max-width: 235px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  font-style: italic;
+
+  letter-spacing: -.3px;
+}
+
+.register-tagline::after {
+  content: "";
+
+  display: block;
+
+  width: 125px;
+  height: 3px;
+
+  margin-top: 7px;
+  margin-left: 20px;
+
+  border-radius: 50%;
+
+  background: #19dff3;
+
+  transform: rotate(-4deg);
+}
+
+/* =========================================================
+   EMPOWERING CARD
+   ========================================================= */
+
+.empowering-card {
+  position: absolute;
+
+  left: 48px;
+  right: 48px;
+
+  bottom: 20px;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 55px;
+
+  padding: 9px 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255,255,255,.20);
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,55,101,.94),
+      rgba(4,65,116,.82)
+    );
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.20);
+
+  backdrop-filter: blur(8px);
+}
+
+/* CARD ICON */
+
+.empowering-icon {
+  flex: 0 0 36px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.05);
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+/* CARD TEXT */
+
+.empowering-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.empowering-card strong {
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.empowering-card span {
+  color: rgba(255,255,255,.74);
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   IMPORTANT - NO VERTICAL DECORATIVE LINES
+   ========================================================= */
+
+.register-left-content::before,
+.register-left-content::after,
+.partner-benefits::before,
+.partner-benefits::after,
+.benefit-item::before,
+.benefit-item::after {
+  content: none !important;
+  display: none !important;
+  border: none !important;
+}
+
+/* =========================================================
+   LAPTOP SCREEN
+   ========================================================= */
+
+@media (max-height: 700px) and (min-width: 801px) {
+
+  .register-left {
+    padding-top: 32px;
+  }
+
+  .register-left h1 {
+    font-size: 38px;
+    margin-top: 14px;
+  }
+
+  .register-left p {
+    margin-top: 12px;
+  }
+
+  .partner-benefits {
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .benefit-icon {
+    width: 31px;
+    height: 31px;
+    flex-basis: 31px;
+  }
+
+  .benefit-item {
+    min-height: 34px;
+  }
+
+  .register-person {
+    right: 12px;
+    width: 44%;
+    max-width: 270px;
+  }
+
+  .register-tagline {
+    bottom: 82px;
+    font-size: 15px;
+  }
+
+  .empowering-card {
+    bottom: 16px;
+  }
+}
+/* =========================================================
+   FINAL DESKTOP VIEWPORT FIT
+   EVERYTHING VISIBLE IN ONE SCREEN
+   ========================================================= */
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Registration area below navbar */
+.register-page {
+  width: 100%;
+  height: calc(100dvh - 72px);
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: 43% 57%;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   LEFT SIDE - COMPACT SCREEN FIT
+   ========================================================= */
+
+.register-left {
+  height: 100%;
+  min-height: 0;
+
+  padding: 30px 48px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.register-left-content {
+  max-width: 500px;
+}
+
+/* Heading smaller and compact */
+
+.register-left h1 {
+  margin-top: 14px;
+  font-size: 38px;
+  line-height: 1.04;
+}
+
+.register-left p {
+  margin-top: 12px;
+  max-width: 440px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Benefits */
+
+.partner-benefits {
+  width: 58%;
+  margin-top: 18px;
+  gap: 8px;
+}
+
+.benefit-item {
+  min-height: 34px;
+  gap: 10px;
+}
+
+.benefit-icon {
+  width: 30px;
+  height: 30px;
+  flex-basis: 30px;
+  font-size: 12px;
+}
+
+.benefit-item h3 {
+  font-size: 11px;
+  margin-bottom: 1px;
+}
+
+.benefit-item p {
+  font-size: 8px;
+}
+
+/* =========================================================
+   FEMALE IMAGE
+   ========================================================= */
+
+.register-person {
+  right: 20px;
+  bottom: 0;
+
+  width: 43%;
+  max-width: 270px;
+}
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.register-tagline {
+  left: 48px;
+  bottom: 82px;
+
+  font-size: 15px;
+  line-height: 1.05;
+}
+
+/* =========================================================
+   BOTTOM CARD
+   ========================================================= */
+
+.empowering-card {
+  left: 48px;
+  right: 48px;
+  bottom: 15px;
+
+  min-height: 50px;
+  padding: 7px 13px;
+
+  border-radius: 11px;
+}
+
+.empowering-icon {
+  width: 32px;
+  height: 32px;
+  flex-basis: 32px;
+  font-size: 16px;
+}
+
+.empowering-card strong {
+  font-size: 11px;
+}
+
+.empowering-card span {
+  font-size: 8px;
+}
+
+/* =========================================================
+   RIGHT SIDE - COMPLETE SCREEN FIT
+   ========================================================= */
+
+.register-right {
+  height: 100%;
+  min-height: 0;
+
+  box-sizing: border-box;
+  padding: 30px 55px;
+
+  overflow: hidden;
+}
+
+/* Registration heading */
+
+.register-header h2 {
+  font-size: 36px;
+}
+
+.register-header p {
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+/* =========================================================
+   STEPS
+   ========================================================= */
+
+.step-preview {
+  margin-top: 23px;
+}
+
+.step > div {
+  width: 38px;
+  height: 38px;
+  font-size: 12px;
+}
+
+.step-line {
+  margin-top: 18px;
+}
+
+.step span {
+  font-size: 9px;
+}
+
+/* =========================================================
+   BASIC DETAILS CARD
+   ========================================================= */
+
+.basic-details {
+  margin-top: 22px;
+  padding: 18px;
+}
+
+.basic-details h3 {
+  font-size: 17px;
+}
+
+.basic-details > p {
+  margin-bottom: 15px;
+  font-size: 10px;
+}
+
+/* Form */
+
+.form-grid {
+  gap: 13px 18px;
+}
+
+.form-field {
+  gap: 5px;
+}
+
+.form-field label {
+  font-size: 9px;
+}
+
+.form-field input {
+  height: 40px;
+  font-size: 10px;
+}
+
+/* Button */
+
+.continue-button {
+  margin-top: 20px;
+
+  min-width: 125px;
+  height: 42px;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   DESKTOP LAPTOP HEIGHT
+   ========================================================= */
+
+@media (min-width: 901px) and (max-height: 750px) {
+
+  .register-page {
+    height: calc(100dvh - 70px);
+  }
+
+  .register-left {
+    padding-top: 24px;
+    padding-bottom: 18px;
+  }
+
+  .register-left h1 {
+    font-size: 35px;
+    margin-top: 12px;
+  }
+
+  .register-left p {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .partner-benefits {
+    margin-top: 15px;
+    gap: 6px;
+  }
+
+  .benefit-item {
+    min-height: 31px;
+  }
+
+  .benefit-icon {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+
+  .register-person {
+    width: 42%;
+    max-width: 260px;
+    right: 18px;
+  }
+
+  .register-tagline {
+    bottom: 76px;
+    font-size: 14px;
+  }
+
+  .empowering-card {
+    bottom: 12px;
+  }
+
+  .register-right {
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+
+  .step-preview {
+    margin-top: 19px;
+  }
+
+  .basic-details {
+    margin-top: 18px;
+    padding: 16px;
+  }
+
+  .form-grid {
+    gap: 11px 17px;
+  }
+
+  .form-field input {
+    height: 38px;
+  }
+
+  .continue-button {
+    margin-top: 17px;
+    height: 39px;
+  }
+}
+
+/* =========================================================
+   REMOVE REGISTRATION PAGE SCROLL
+   ========================================================= */
+
+.register-page,
+.register-left,
+.register-right {
+  scrollbar-width: none;
+}
+
+.register-page::-webkit-scrollbar,
+.register-left::-webkit-scrollbar,
+.register-right::-webkit-scrollbar {
+  display: none;
+}
+/* =========================================================
+   LEFT PANEL - FINAL VISUAL POLISH
+   Bigger Image + Bigger Readable Text
+   ========================================================= */
+
+/* LEFT PANEL */
+.register-left {
+  padding: 30px 48px;
+}
+
+/* HEADING */
+.register-left h1 {
+  max-width: 430px;
+  margin-top: 15px;
+  font-size: 40px;
+  line-height: 1.04;
+  letter-spacing: -1.2px;
+}
+
+.register-left p {
+  max-width: 455px;
+  margin-top: 13px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.partner-benefits {
+  width: 62%;
+  margin-top: 21px;
+  gap: 10px;
+}
+
+.benefit-item {
+  min-height: 40px;
+  gap: 11px;
+}
+
+.benefit-icon {
+  width: 35px;
+  height: 35px;
+  flex-basis: 35px;
+  font-size: 14px;
+}
+
+.benefit-item h3 {
+  margin-bottom: 3px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.benefit-item p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+/* =========================================================
+   FEMALE IMAGE
+   Slightly bigger + shifted LEFT
+   ========================================================= */
+
+.register-person {
+  right: 25px;
+  bottom: 0;
+
+  width: 47%;
+  max-width: 305px;
+}
+
+.register-person img {
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.register-tagline {
+  left: 48px;
+  bottom: 82px;
+
+  font-size: 17px;
+  line-height: 1.08;
+}
+
+/* =========================================================
+   EMPOWERING CARD
+   ========================================================= */
+
+.empowering-card {
+  left: 48px;
+  right: 48px;
+  bottom: 15px;
+
+  min-height: 55px;
+  padding: 8px 15px;
+}
+
+.empowering-icon {
+  width: 35px;
+  height: 35px;
+  flex-basis: 35px;
+}
+
+.empowering-card strong {
+  font-size: 12px;
+}
+
+.empowering-card span {
+  font-size: 9px;
+}
+
+/* =========================================================
+   NO DECORATIVE VERTICAL LINES
+   ========================================================= */
+
+.register-left-content::before,
+.register-left-content::after,
+.partner-benefits::before,
+.partner-benefits::after,
+.benefit-item::before,
+.benefit-item::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* =========================================================
+   LAPTOP HEIGHT - KEEP EVERYTHING IN VIEW
+   ========================================================= */
+
+@media (min-width: 901px) and (max-height: 750px) {
+
+  .register-left {
+    padding: 25px 48px;
+  }
+
+  .register-left h1 {
+    margin-top: 13px;
+    font-size: 37px;
+  }
+
+  .register-left p {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+
+  .partner-benefits {
+    margin-top: 17px;
+    gap: 8px;
+  }
+
+  .benefit-item {
+    min-height: 36px;
+  }
+
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+
+  .benefit-item h3 {
+    font-size: 12px;
+  }
+
+  .benefit-item p {
+    font-size: 9px;
+  }
+
+  .register-person {
+    right: 25px;
+    width: 47%;
+    max-width: 295px;
+  }
+
+  .register-tagline {
+    bottom: 78px;
+    font-size: 16px;
+  }
+
+  .empowering-card {
+    bottom: 13px;
+    min-height: 52px;
+  }
+}
+/* =========================================================
+   FEMALE IMAGE - BIGGER & SLIGHTLY LEFT
+   ========================================================= */
+
+.register-person {
+  right: 22px;
+  bottom: 0;
+
+  width: 53%;
+  max-width: 340px;
+
+  z-index: 5;
+}
+
+.register-person img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Laptop screen fit */
+@media (min-width: 901px) and (max-height: 750px) {
+
+  .register-person {
+    right: 22px;
+    width: 51%;
+    max-width: 330px;
+    bottom: 0;
+  }
+}
+/* Female image - slightly smaller */
+
+.register-person {
+  width: 49%;
+  max-width: 320px;
+  right: 25px;
+  bottom: 0;
+}
+
+.register-person img {
+  width: 100%;
+  height: auto;
+}
+/* =========================================================
+   RIGHT PANEL - HEADER POLISH
+   ========================================================= */
+
+.register-right {
+  position: relative;
+}
+
+/* Registration heading area */
+
+.register-header {
+  padding-right: 95px;
+}
+
+.register-header > span {
+  margin-bottom: 6px;
+  color: #7b8da3;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.register-header h2 {
+  margin: 0;
+  color: #102a43;
+  font-size: 38px;
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.register-header h2 strong {
+  color: #087bc1;
+}
+
+.register-header p {
+  margin-top: 8px;
+  color: #71839a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   INSTITUTE ICON
+   ========================================================= */
+
+.register-right::after {
+  content: "🏫";
+
+  position: absolute;
+  top: 25px;
+  right: 42px;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #edf7fd;
+
+  font-size: 31px;
+
+  box-shadow: 0 5px 18px rgba(20, 90, 140, 0.08);
+}
+
+/* =========================================================
+   LAPTOP SCREEN
+   ========================================================= */
+
+@media (min-width: 901px) and (max-height: 750px) {
+
+  .register-header {
+    padding-right: 85px;
+  }
+
+  .register-header h2 {
+    font-size: 35px;
+  }
+
+  .register-header p {
+    font-size: 11px;
+  }
+
+  .register-right::after {
+    top: 22px;
+    right: 38px;
+    width: 56px;
+    height: 56px;
+    font-size: 27px;
+  }
+}
+/* =========================================================
+   RIGHT SIDE - STANDARD & VISUAL FONT SIZE
+   ========================================================= */
+
+.register-header > span {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.register-header h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.register-header p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* STEP LABELS */
+
+.step > div {
+  width: 42px;
+  height: 42px;
+  font-size: 14px;
+}
+
+.step span {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* BASIC DETAILS */
+
+.basic-details h3 {
+  font-size: 20px;
+}
+
+.basic-details > p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* FORM LABELS */
+
+.form-field label {
+  font-size: 11px;
+}
+
+/* INPUT TEXT */
+
+.form-field input {
+  height: 44px;
+  font-size: 12px;
+}
+
+.form-field input::placeholder {
+  font-size: 12px;
+}
+
+/* CONTINUE */
+
+.continue-button {
+  min-width: 135px;
+  height: 44px;
+  font-size: 12px;
+}
+
+/* =========================================================
+   KEEP DESKTOP CONTENT FIT
+   ========================================================= */
+
+@media (min-width: 901px) and (max-height: 750px) {
+
+  .register-header h2 {
+    font-size: 37px;
+  }
+
+  .register-header p {
+    font-size: 12px;
+  }
+
+  .step > div {
+    width: 40px;
+    height: 40px;
+  }
+
+  .step span {
+    font-size: 10px;
+  }
+
+  .basic-details h3 {
+    font-size: 18px;
+  }
+
+  .basic-details > p {
+    font-size: 11px;
+  }
+
+  .form-field label {
+    font-size: 10px;
+  }
+
+  .form-field input {
+    height: 41px;
+    font-size: 11px;
+  }
+}
+/* =========================================================
+   RIGHT SIDE - LARGER VISUAL TYPOGRAPHY
+   ========================================================= */
+
+.register-header > span {
+  font-size: 12px;
+}
+
+.register-header h2 {
+  font-size: 43px;
+  line-height: 1.12;
+}
+
+.register-header p {
+  font-size: 14px;
+}
+
+/* STEPS */
+
+.step > div {
+  width: 44px;
+  height: 44px;
+  font-size: 15px;
+}
+
+.step span {
+  font-size: 12px;
+}
+
+/* BASIC DETAILS */
+
+.basic-details h3 {
+  font-size: 22px;
+}
+
+.basic-details > p {
+  font-size: 13px;
+}
+
+/* FORM LABELS */
+
+.form-field label {
+  font-size: 12px;
+}
+
+/* INPUTS */
+
+.form-field input {
+  height: 46px;
+  font-size: 13px;
+}
+
+.form-field input::placeholder {
+  font-size: 13px;
+}
+
+/* BUTTON */
+
+.continue-button {
+  min-width: 140px;
+  height: 46px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   DESKTOP SCREEN FIT
+   ========================================================= */
+
+@media (min-width: 901px) and (max-height: 750px) {
+
+  .register-header h2 {
+    font-size: 40px;
+  }
+
+  .register-header p {
+    font-size: 13px;
+  }
+
+  .step > div {
+    width: 42px;
+    height: 42px;
+  }
+
+  .step span {
+    font-size: 11px;
+  }
+
+  .basic-details h3 {
+    font-size: 20px;
+  }
+
+  .basic-details > p {
+    font-size: 12px;
+  }
+
+  .form-field label {
+    font-size: 14px;
+  }
+
+  .form-field input {
+    height: 43px;
+    font-size: 12px;
+  }
+}
+/* Basic Details form labels */
+
+.form-field label {
+  font-size: 13px !important;
+}
+/* =========================================
+   REGISTER — BASIC DETAILS POLISH
+========================================= */
+
+.basic-details {
+  padding: 20px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, #f2f9ff, #edf7ff) !important;
+  border: 1px solid #e1edf7;
+  box-sizing: border-box;
+}
+
+.basic-details h3 {
+  margin: 0 0 5px !important;
+  font-size: 21px !important;
+  color: #12366e !important;
+  font-weight: 800 !important;
+}
+
+.basic-details > p {
+  margin: 0 0 17px !important;
+  font-size: 12px !important;
+  color: #607b99 !important;
+}
+
+/* FORM GRID */
+.form-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  column-gap: 17px !important;
+  row-gap: 13px !important;
+}
+
+/* LABEL */
+.form-field label {
+  display: block !important;
+  margin-bottom: 6px !important;
+
+  color: #17365f !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+/* INPUT */
+.form-field input {
+  width: 100% !important;
+  height: 45px !important;
+  padding: 0 13px !important;
+
+  box-sizing: border-box !important;
+
+  border: 1px solid #d3e1ee !important;
+  border-radius: 9px !important;
+
+  background: #ffffff !important;
+  color: #263f5e !important;
+
+  font-family: inherit !important;
+  font-size: 12px !important;
+
+  outline: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.form-field input::placeholder {
+  color: #9aaabd !important;
+}
+
+.form-field input:focus {
+  border-color: #1689e5 !important;
+  box-shadow: 0 0 0 3px rgba(22, 137, 229, 0.09) !important;
+}
+
+/* CONTINUE BUTTON */
+.continue-button {
+  min-width: 140px !important;
+  height: 45px !important;
+  margin-top: 16px !important;
+  padding: 0 20px !important;
+
+  border: 0 !important;
+  border-radius: 9px !important;
+
+  background: linear-gradient(
+    90deg,
+    #0877c9,
+    #0875c4
+  ) !important;
+
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.continue-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(8, 119, 201, 0.22);
+}
+/* =========================================
+   REGISTER — STEP PROGRESS POLISH
+========================================= */
+
+.step-preview {
+  display: flex !important;
+  align-items: flex-start !important;
+  width: 100%;
+  margin: 20px 0 18px !important;
+}
+
+.step {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  min-width: 92px;
+}
+
+.step > div {
+  width: 42px !important;
+  height: 42px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: 2px solid #d8e4ef !important;
+  border-radius: 50% !important;
+
+  background: #ffffff !important;
+  color: #6f8298 !important;
+
+  font-size: 14px !important;
+  font-weight: 700 !important;
+
+  box-sizing: border-box !important;
+  transition: all 0.2s ease;
+}
+
+.step.active > div {
+  border-color: #087bcf !important;
+  background: linear-gradient(
+    135deg,
+    #087bcf,
+    #159be5
+  ) !important;
+  color: #ffffff !important;
+
+  box-shadow:
+    0 7px 16px rgba(8, 123, 207, 0.22);
+}
+
+.step span {
+  margin-top: 7px !important;
+
+  color: #70849a !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+
+  white-space: nowrap;
+  text-align: center;
+}
+
+.step.active span {
+  color: #0876c5 !important;
+  font-weight: 700 !important;
+}
+
+/* CONNECTING LINE */
+.step-line {
+  flex: 1 !important;
+  height: 2px !important;
+
+  margin-top: 20px !important;
+
+  background: #dce6ef !important;
+  border-radius: 10px !important;
+}
+
+/* =========================================
+   STEP RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .step {
+    min-width: 75px;
+  }
+
+  .step span {
+    font-size: 9px !important;
+  }
+}
+/* =========================================
+   REGISTER FORM — FUNCTIONAL POLISH
+========================================= */
+
+.form-field select {
+  width: 100%;
+  height: 45px;
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d3e1ee;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #263f5e;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.form-field select:focus {
+  border-color: #1689e5;
+  box-shadow: 0 0 0 3px rgba(22, 137, 229, 0.09);
+}
+
+.form-field select:disabled {
+  background: #f5f8fb;
+  color: #9aaabd;
+  cursor: not-allowed;
+}
+
+.form-error {
+  display: block;
+  margin-top: 4px;
+
+  color: #dc3545;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.form-field input.input-error,
+.form-field select.input-error {
+  border-color: #dc3545 !important;
+}
+
+.register-form-actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.back-step-button {
+  height: 45px;
+  padding: 0 20px;
+
+  border: 1px solid #1764b0;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #1764b0;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-step-button:hover {
+  background: #f1f8ff;
+  transform: translateY(-1px);
+}
+
+.register-form-actions .continue-button {
+  margin-top: 0 !important;
+}
+
+/* COMPLETED STEP LINE */
+
+.step-line.completed {
+  background: #087bcf !important;
+}
+/* =========================================
+   REGISTER — VALIDATION ERROR POLISH
+========================================= */
+
+.form-error {
+  display: block !important;
+  margin-top: 3px !important;
+
+  color: #dc3545 !important;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+}
+
+/* Keep form spacing compact when errors appear */
+.form-field {
+  min-height: 0 !important;
+}
+
+.basic-details {
+  padding-bottom: 16px !important;
+}
+
+.register-form-actions {
+  margin-top: 12px !important;
+}
+/* =========================================
+   REGISTER — STEP 2 POLISH
+========================================= */
+
+.basic-details .form-field select {
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  cursor: pointer !important;
+}
+
+.basic-details .form-field select:focus {
+  border-color: #1689e5 !important;
+  box-shadow: 0 0 0 3px rgba(22, 137, 229, 0.09) !important;
+}
+
+/* Disabled District */
+.basic-details .form-field select:disabled {
+  background: #f5f8fb !important;
+  color: #9aaabd !important;
+  cursor: not-allowed !important;
+}
+
+/* FORM ACTIONS */
+.register-form-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 10px !important;
+  margin-top: 14px !important;
+}
+
+/* BACK BUTTON */
+.back-step-button {
+  height: 45px !important;
+  min-width: 84px !important;
+  padding: 0 18px !important;
+
+  border: 1px solid #1764b0 !important;
+  border-radius: 9px !important;
+
+  background: #ffffff !important;
+  color: #1764b0 !important;
+
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.back-step-button:hover {
+  background: #1764b0 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(23, 100, 176, 0.18);
+}
+
+/* CONTINUE */
+.register-form-actions .continue-button {
+  min-width: 140px !important;
+  height: 45px !important;
+  margin-top: 0 !important;
+}
+
+
+
