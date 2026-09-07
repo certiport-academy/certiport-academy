@@ -4,17 +4,28 @@ import indiaLocations from "../data/indiaLocations";
 
 function RegisterInstitute() {
   const [currentStep, setCurrentStep] = useState(1);
+   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
-    instituteName: "",
-    directorName: "",
-    email: "",
-    contactNumber: "",
-    state: "",
-    district: "",
-    city: "",
-    pincode: "",
-  });
+  profilePhoto: "",
+  instituteName: "",
+  directorName: "",
+  gender: "",
+  contactNumber: "",
+  email: "",
+
+  address: "",
+  state: "",
+  district: "",
+  city: "",
+  pincode: "",
+
+  instituteType: "",
+  establishmentYear: "",
+  website: "",
+  computerSystems: "",
+  instituteExperience: "",
+});
 
   const [errors, setErrors] = useState({});
 
@@ -81,7 +92,9 @@ function RegisterInstitute() {
 
     if (!formData.pincode.trim()) {
       newErrors.pincode = "Pincode is required.";
-    } else if (!/^\d{6}$/.test(formData.pincode)) {
+    } else if (
+  !/^[1-9]\d{5}$/.test(formData.pincode)
+) {
       newErrors.pincode = "Please enter a valid 6 digit Pincode.";
     }
 
@@ -105,6 +118,41 @@ function RegisterInstitute() {
         setErrors({});
       }
     }
+    if (currentStep === 3) {
+  const newErrors = {};
+
+  if (!formData.address.trim()) {
+    newErrors.address = "Institute Address is required.";
+  }
+
+  if (!formData.instituteType) {
+    newErrors.instituteType = "Please select Institute Type.";
+  }
+
+  if (!formData.establishmentYear) {
+    newErrors.establishmentYear =
+      "Please select Year of Establishment.";
+  }
+
+  if (!formData.computerSystems) {
+    newErrors.computerSystems =
+      "Please enter number of computer systems.";
+  }
+
+  if (!formData.instituteExperience) {
+    newErrors.instituteExperience =
+      "Please select Institute Experience.";
+  }
+
+  setErrors(newErrors);
+
+  if (Object.keys(newErrors).length === 0) {
+    setCurrentStep(4);
+    setErrors({});
+  }
+
+  return;
+}
   };
 
   const goBack = () => {
@@ -232,7 +280,7 @@ function RegisterInstitute() {
 
           <div className={`step ${currentStep >= 1 ? "active" : ""}`}>
             <div>{currentStep > 1 ? "✓" : "1"}</div>
-            <span>Basic Details</span>
+            <span>Institute Information</span>
           </div>
 
           <div
@@ -243,7 +291,7 @@ function RegisterInstitute() {
 
           <div className={`step ${currentStep >= 2 ? "active" : ""}`}>
             <div>{currentStep > 2 ? "✓" : "2"}</div>
-            <span>Institute Information</span>
+            <span>Basic Details</span>
           </div>
 
           <div
@@ -269,126 +317,247 @@ function RegisterInstitute() {
 
         {/* ================= STEP 1 ================= */}
 
-        {currentStep === 1 && (
-          <div className="basic-details">
+{currentStep === 1 && (
+  <div className="basic-details">
 
-            <h3>Basic Details</h3>
+    <h3>Institute Information</h3>
 
-            <p>
-              Provide your institute's basic contact information.
-            </p>
+    <p>
+      Provide your institute's basic information.
+    </p>
 
-            <div className="form-grid">
+    <div className="form-grid">
+      {/* INSTITUTE NAME */}
+      <div className="form-field">
+        <label>Institute Name *</label>
 
-              <div className="form-field">
-                <label>Institute Name *</label>
+        <input
+          type="text"
+          name="instituteName"
+          value={formData.instituteName}
+          onChange={handleChange}
+          placeholder="Enter Institute Name"
+        />
 
-                <input
-                  type="text"
-                  name="instituteName"
-                  value={formData.instituteName}
-                  onChange={handleChange}
-                  placeholder="Enter Institute Name"
-                />
-
-                {errors.instituteName && (
-                  <small className="form-error">
-                    {errors.instituteName}
-                  </small>
-                )}
-              </div>
-
-
-              <div className="form-field">
-                <label>Director / Head Name *</label>
-
-                <input
-                  type="text"
-                  name="directorName"
-                  value={formData.directorName}
-                  onChange={handleChange}
-                  placeholder="Enter Director Name"
-                />
-
-                {errors.directorName && (
-                  <small className="form-error">
-                    {errors.directorName}
-                  </small>
-                )}
-              </div>
-
-
-              <div className="form-field">
-                <label>Email ID *</label>
-
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Enter Email ID"
-                />
-
-                {errors.email && (
-                  <small className="form-error">
-                    {errors.email}
-                  </small>
-                )}
-              </div>
-
-
-              <div className="form-field">
-                <label>Contact Number *</label>
-
-                <input
-                  type="tel"
-                  name="contactNumber"
-                  value={formData.contactNumber}
-                  onChange={handleChange}
-                  maxLength="10"
-                  placeholder="Enter 10 digit mobile number"
-                />
-
-                {errors.contactNumber && (
-                  <small className="form-error">
-                    {errors.contactNumber}
-                  </small>
-                )}
-              </div>
-
-            </div>
-
-            <div className="register-form-actions">
-              <button
-                type="button"
-                className="continue-button"
-                onClick={handleContinue}
-              >
-                Continue →
-              </button>
-            </div>
-
-          </div>
+        {errors.instituteName && (
+          <small className="form-error">
+            {errors.instituteName}
+          </small>
         )}
+      </div>
 
+      {/* PROFILE PHOTO */}
+      <div className="profile-photo-upload-box">
 
-        {/* ================= STEP 2 ================= */}
+  {formData.profilePhoto ? (
+    <div className="profile-photo-selected">
+
+      <img
+        src={URL.createObjectURL(formData.profilePhoto)}
+        alt="Profile Preview"
+        className="profile-photo-preview"
+      />
+
+      <div className="profile-photo-selected-info">
+        <strong>{formData.profilePhoto.name}</strong>
+
+        <span>Profile photo selected</span>
+
+        <div className="profile-photo-actions">
+
+          <label
+            htmlFor="profilePhotoInput"
+            className="photo-change-button"
+          >
+            Change Photo
+          </label>
+
+          <button
+            type="button"
+            className="photo-remove-button"
+            onClick={() => {
+              setFormData((prev) => ({
+                ...prev,
+                profilePhoto: "",
+              }));
+            }}
+          >
+            Remove
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  ) : (
+    <label
+      htmlFor="profilePhotoInput"
+      className="profile-photo-dropzone"
+    >
+      <div className="profile-photo-upload-icon">
+        📷
+      </div>
+
+      <div className="profile-photo-upload-text">
+        <strong>Upload Profile Photo</strong>
+        <span>JPG or PNG • Optional</span>
+      </div>
+    </label>
+  )}
+
+  <input
+    id="profilePhotoInput"
+    type="file"
+    name="profilePhoto"
+    accept="image/jpeg,image/png"
+    hidden
+    onChange={(e) => {
+      const file = e.target.files?.[0];
+
+      if (!file) return;
+
+      setFormData((prev) => ({
+        ...prev,
+        profilePhoto: file,
+      }));
+
+      setErrors((prev) => ({
+        ...prev,
+        profilePhoto: "",
+      }));
+    }}
+  />
+
+</div>
+
+      
+
+      {/* DIRECTOR / HEAD NAME */}
+      <div className="form-field">
+        <label>Director / Head Name *</label>
+
+        <input
+          type="text"
+          name="directorName"
+          value={formData.directorName}
+          onChange={handleChange}
+          placeholder="Enter Director / Head Name"
+        />
+
+        {errors.directorName && (
+          <small className="form-error">
+            {errors.directorName}
+          </small>
+        )}
+      </div>
+
+      {/* GENDER */}
+      <div className="form-field">
+        <label>Gender</label>
+
+        <select
+          name="gender"
+          value={formData.gender}
+          onChange={handleChange}
+        >
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      {/* CONTACT NUMBER */}
+      <div className="form-field">
+        <label>Contact Number *</label>
+
+        <input
+          type="tel"
+          name="contactNumber"
+          value={formData.contactNumber}
+          onChange={handleChange}
+          maxLength="10"
+          placeholder="Enter 10 digit mobile number"
+        />
+
+        {errors.contactNumber && (
+          <small className="form-error">
+            {errors.contactNumber}
+          </small>
+        )}
+      </div>
+
+      {/* EMAIL ADDRESS */}
+      <div className="form-field">
+        <label>Email Address *</label>
+
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Enter Email Address"
+        />
+
+        {errors.email && (
+          <small className="form-error">
+            {errors.email}
+          </small>
+        )}
+      </div>
+
+    </div>
+
+    {/* ACTION BUTTON */}
+    <div className="register-form-actions">
+
+      <button
+        type="button"
+        className="continue-button"
+        onClick={handleContinue}
+      >
+        Continue →
+      </button>
+
+    </div>
+
+  </div>
+)}
+
+             {/* ================= STEP 2 ================= */}
 
         {currentStep === 2 && (
           <div className="basic-details">
 
-            <h3>Institute Information</h3>
+            <h3>Basic Details</h3>
 
-            <p>
-              Provide your institute's location information.
-            </p>
+<p>
+  Provide your institute's basic address and location information.
+</p>
 
             <div className="form-grid">
+              {/* INSTITUTE ADDRESS */}
+      <div className="form-field full-width-field">
+        <label>Institute Address *</label>
+
+        <textarea
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          placeholder="Enter complete Institute Address"
+        />
+
+        {errors.address && (
+          <small className="form-error">
+            {errors.address}
+          </small>
+        )}
+      </div>
 
               {/* STATE */}
 
               <div className="form-field">
-                <label>State *</label>
+                <label>State </label>
 
                 <select
                   name="state"
@@ -417,7 +586,7 @@ function RegisterInstitute() {
               {/* DISTRICT */}
 
               <div className="form-field">
-                <label>District *</label>
+                <label>District </label>
 
                 <select
                   name="district"
@@ -455,7 +624,7 @@ function RegisterInstitute() {
               {/* CITY */}
 
               <div className="form-field">
-                <label>City *</label>
+                <label>City </label>
 
                 <input
                   type="text"
@@ -476,7 +645,7 @@ function RegisterInstitute() {
               {/* PINCODE */}
 
               <div className="form-field">
-                <label>Pincode *</label>
+                <label>Pincode </label>
 
                 <input
                   type="text"
@@ -520,31 +689,434 @@ function RegisterInstitute() {
         )}
 
 
-        {/* ================= STEP 3 PLACEHOLDER ================= */}
+        {/* ================= STEP 3 ================= */}
 
-        {currentStep === 3 && (
-          <div className="basic-details">
+{currentStep === 3 && (
+  <div className="basic-details">
 
-            <h3>Additional Details</h3>
+    <h3>Additional Details</h3>
 
-            <p>
-              Additional institute information will be added here.
-            </p>
+    <p>
+      Provide some additional information about your institute.
+    </p>
 
-            <div className="register-form-actions">
+    <div className="form-grid">
 
-              <button
-                type="button"
-                className="back-step-button"
-                onClick={goBack}
-              >
-                ← Back
-              </button>
+      
 
-            </div>
 
-          </div>
+      {/* INSTITUTE TYPE */}
+      <div className="form-field">
+        <label>Institute Type *</label>
+
+        <select
+          name="instituteType"
+          value={formData.instituteType}
+          onChange={handleChange}
+        >
+          <option value="">Select Institute Type</option>
+          <option value="Private">Private</option>
+          <option value="Government">Government</option>
+          <option value="Other">Other</option>
+        </select>
+
+        {errors.instituteType && (
+          <small className="form-error">
+            {errors.instituteType}
+          </small>
         )}
+      </div>
+
+
+      {/* YEAR OF ESTABLISHMENT */}
+      <div className="form-field">
+        <label>Year of Establishment *</label>
+
+        <select
+          name="establishmentYear"
+          value={formData.establishmentYear}
+          onChange={handleChange}
+        >
+          <option value="">Select Year</option>
+
+          {Array.from(
+            { length: new Date().getFullYear() - 1950 + 1 },
+            (_, index) => new Date().getFullYear() - index
+          ).map((year) => (
+            <option key={year} value={year}>
+              {year}
+            </option>
+          ))}
+        </select>
+
+        {errors.establishmentYear && (
+          <small className="form-error">
+            {errors.establishmentYear}
+          </small>
+        )}
+      </div>
+
+
+      {/* WEBSITE / SOCIAL PROFILE */}
+      <div className="form-field">
+        <label>Website / Social Profile</label>
+
+        <input
+          type="text"
+          name="website"
+          value={formData.website}
+          onChange={handleChange}
+          placeholder="Enter Website or Social Profile"
+        />
+      </div>
+
+
+      {/* COMPUTER SYSTEMS */}
+      <div className="form-field">
+        <label>Total Computer Systems *</label>
+
+        <input
+          type="number"
+          name="computerSystems"
+          value={formData.computerSystems}
+          onChange={handleChange}
+          min="1"
+          placeholder="Enter Number"
+        />
+
+        {errors.computerSystems && (
+          <small className="form-error">
+            {errors.computerSystems}
+          </small>
+        )}
+      </div>
+
+
+      {/* INSTITUTE EXPERIENCE */}
+      <div className="form-field">
+        <label>Institute Experience *</label>
+
+        <select
+          name="instituteExperience"
+          value={formData.instituteExperience}
+          onChange={handleChange}
+        >
+          <option value="">Select Experience</option>
+          <option value="New Institute">New Institute</option>
+          <option value="1–3 Years">1–3 Years</option>
+          <option value="3–5 Years">3–5 Years</option>
+          <option value="5+ Years">5+ Years</option>
+        </select>
+
+        {errors.instituteExperience && (
+          <small className="form-error">
+            {errors.instituteExperience}
+          </small>
+        )}
+      </div>
+
+    </div>
+
+
+    {/* ACTION BUTTONS */}
+    <div className="register-form-actions">
+
+      <button
+        type="button"
+        className="back-step-button"
+        onClick={goBack}
+      >
+        ← Back
+      </button>
+
+      <button
+        type="button"
+        className="continue-button"
+        onClick={handleContinue}
+      >
+        Continue →
+      </button>
+
+    </div>
+
+  </div>
+)}
+{/* ================= STEP 4 ================= */}
+
+{isSubmitted ? (
+
+  <div className="registration-success">
+
+    <div className="success-icon">
+      ✓
+    </div>
+
+    <h3>Registration Submitted Successfully!</h3>
+
+    <p>
+      Your institute registration has been submitted successfully
+      and is currently <strong>Pending Admin Review</strong>.
+    </p>
+
+    <div className="application-status-box">
+      <span>Application Status</span>
+      <strong>🟡 Pending Admin Approval</strong>
+    </div>
+
+    <p className="success-info">
+      Once your registration is approved by Admin, your institute
+      account will be activated and your{" "}
+      <strong>Login ID and Password</strong> will be sent to your
+      registered email address.
+    </p>
+
+    <div className="application-id-box">
+      <span>Application ID</span>
+      <strong>CA-XXXXXXXX</strong>
+    </div>
+
+    <button
+      type="button"
+      className="continue-button"
+      onClick={() => {
+        window.location.href = "/";
+      }}
+    >
+      Back to Home
+    </button>
+
+  </div>
+
+) : (
+
+  currentStep === 4 && (
+
+    <div className="basic-details review-details">
+
+      <h3>Review & Submit</h3>
+
+      <p>
+        Please review your institute information before submitting
+        the registration.
+      </p>
+
+      {/* ================= INSTITUTE INFORMATION ================= */}
+
+      <div className="review-section">
+
+        <div className="review-section-header">
+
+          <h4>Institute Information</h4>
+
+          <button
+            type="button"
+            className="review-edit-button"
+            onClick={() => setCurrentStep(1)}
+          >
+            Edit
+          </button>
+
+        </div>
+
+        <div className="review-grid">
+
+          <div className="review-item review-full">
+            <span>Profile Photo</span>
+            <strong>
+              {formData.profilePhoto?.name || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Institute Name</span>
+            <strong>
+              {formData.instituteName || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Director / Head Name</span>
+            <strong>
+              {formData.directorName || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Gender</span>
+            <strong>
+              {formData.gender || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Contact Number</span>
+            <strong>
+              {formData.contactNumber || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Email Address</span>
+            <strong>
+              {formData.email || "—"}
+            </strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* ================= BASIC DETAILS ================= */}
+
+      <div className="review-section">
+
+        <div className="review-section-header">
+
+          <h4>Basic Details</h4>
+
+          <button
+            type="button"
+            className="review-edit-button"
+            onClick={() => setCurrentStep(2)}
+          >
+            Edit
+          </button>
+
+        </div>
+
+        <div className="review-grid">
+
+          <div className="review-item review-full">
+            <span>Institute Address</span>
+            <strong>
+              {formData.address || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>State</span>
+            <strong>
+              {formData.state || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>District</span>
+            <strong>
+              {formData.district || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>City</span>
+            <strong>
+              {formData.city || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Pin Code</span>
+            <strong>
+              {formData.pincode || "—"}
+            </strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* ================= ADDITIONAL DETAILS ================= */}
+
+      <div className="review-section">
+
+        <div className="review-section-header">
+
+          <h4>Additional Details</h4>
+
+          <button
+            type="button"
+            className="review-edit-button"
+            onClick={() => setCurrentStep(3)}
+          >
+            Edit
+          </button>
+
+        </div>
+
+        <div className="review-grid">
+
+          <div className="review-item">
+            <span>Institute Type</span>
+            <strong>
+              {formData.instituteType || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Year of Establishment</span>
+            <strong>
+              {formData.establishmentYear || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Website / Social Profile</span>
+            <strong>
+              {formData.website || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Total Computer Systems</span>
+            <strong>
+              {formData.computerSystems || "—"}
+            </strong>
+          </div>
+
+          <div className="review-item">
+            <span>Institute Experience</span>
+            <strong>
+              {formData.instituteExperience || "—"}
+            </strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* ================= ACTION BUTTONS ================= */}
+
+      <div className="register-form-actions">
+
+        <button
+          type="button"
+          className="back-step-button"
+          onClick={goBack}
+        >
+          ← Back
+        </button>
+
+        <button
+          type="button"
+          className="continue-button"
+          onClick={() => {
+            setIsSubmitted(true);
+          }}
+        >
+          Submit Registration ✓
+        </button>
+
+      </div>
+
+    </div>
+
+  )
+
+)}
+
 
       </div>
 

@@ -2418,6 +2418,625 @@ body {
   height: 45px !important;
   margin-top: 0 !important;
 }
+/* =========================================
+   REGISTER — STEP 3 ADDITIONAL DETAILS
+========================================= */
+
+.form-field textarea {
+  width: 100%;
+  min-height: 70px;
+  padding: 11px 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d3e1ee;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #263f5e;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  outline: none;
+  resize: none;
+
+  transition: all 0.2s ease;
+}
+
+.form-field textarea::placeholder {
+  color: #9aaabd;
+}
+
+.form-field textarea:focus {
+  border-color: #1689e5;
+  box-shadow: 0 0 0 3px rgba(22, 137, 229, 0.09);
+}
+
+.full-width-field {
+  grid-column: 1 / -1;
+}
+/* =========================================
+   REGISTER — STEP CONTENT VISIBILITY
+========================================= */
+
+.register-right {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+/* =========================================
+   STEP 4 — REVIEW & SUBMIT
+========================================= */
+
+.review-details {
+  width: 100%;
+  padding: 18px 20px 16px !important;
+  box-sizing: border-box;
+}
+
+.review-details h3 {
+  margin: 0 0 4px !important;
+  color: #123f72;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.review-details > p {
+  margin: 0 0 14px !important;
+  color: #71859a;
+  font-size: 12px;
+}
+
+
+/* REVIEW SECTION */
+
+.review-section {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 11px 13px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #dce7f1;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 12px rgba(24, 76, 120, 0.05);
+}
+
+
+/* SECTION HEADER */
+
+.review-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.review-section-header h4 {
+  margin: 0;
+  color: #1764b0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* EDIT BUTTON */
+
+.review-edit-button {
+  height: 25px;
+  padding: 0 10px;
+
+  border: 1px solid #1689e5;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #1689e5;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.review-edit-button:hover {
+  background: #1689e5;
+  color: #ffffff;
+}
+
+
+/* REVIEW GRID */
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 18px;
+}
+
+
+/* REVIEW ITEM */
+
+.review-item {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.review-item span {
+  color: #8a9caf;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.review-item strong {
+  color: #263f5e;
+  font-size: 11px;
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+.review-full {
+  grid-column: 1 / -1;
+}
+
+
+/* STEP 4 BUTTONS */
+
+.review-details .register-form-actions {
+  margin-top: 12px !important;
+  padding-top: 2px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-full {
+    grid-column: auto;
+  }
+}
+/* ================= PROFILE PHOTO UPLOAD ================= */
+
+.profile-photo-upload {
+  width: 100%;
+}
+
+.profile-photo-upload input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px dashed #b9cfe2;
+  border-radius: 9px;
+  background: #f8fbfe;
+  color: #6f8298;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.profile-photo-upload input[type="file"]:hover {
+  border-color: #1689e5;
+  background: #f5faff;
+}
+/* ================= PROFILE PHOTO MODERN UPLOAD ================= */
+
+.profile-photo-upload-box {
+  width: 100%;
+}
+
+.profile-photo-dropzone {
+  width: 100%;
+  min-height: 72px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px dashed #b8cfe2;
+  border-radius: 10px;
+  background: #f8fbfe;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-photo-dropzone:hover {
+  border-color: #1689e5;
+  background: #f3faff;
+  box-shadow: 0 4px 12px rgba(22, 137, 229, 0.08);
+}
+
+.profile-photo-upload-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #eaf5fd;
+  font-size: 20px;
+}
+
+.profile-photo-upload-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.profile-photo-upload-text strong {
+  color: #1764b0;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.profile-photo-upload-text span {
+  color: #8a9caf;
+  font-size: 9px;
+  font-weight: 500;
+}
+/* ================= PROFILE PHOTO PREVIEW ================= */
+
+.profile-photo-selected {
+  width: 100%;
+  min-height: 82px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border: 1px solid #d5e4f0;
+  border-radius: 10px;
+  background: #f8fbfe;
+}
+
+.profile-photo-preview {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #d5e4f0;
+}
+
+.profile-photo-selected-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.profile-photo-selected-info strong {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #263f5e;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.profile-photo-selected-info > span {
+  color: #8a9caf;
+  font-size: 9px;
+}
+
+.profile-photo-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 3px;
+}
+
+.photo-change-button,
+.photo-remove-button {
+  height: 25px;
+  padding: 0 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.photo-change-button {
+  border: 1px solid #1689e5;
+  background: #ffffff;
+  color: #1689e5;
+}
+
+.photo-change-button:hover {
+  background: #1689e5;
+  color: #ffffff;
+}
+
+.photo-remove-button {
+  border: 1px solid #dc3545;
+  background: #ffffff;
+  color: #dc3545;
+}
+
+.photo-remove-button:hover {
+  background: #dc3545;
+  color: #ffffff;
+}
+/* ================= FORM TYPOGRAPHY ================= */
+
+.basic-details h3 {
+  font-size: 24px !important;
+}
+
+.basic-details > p {
+  font-size: 13px !important;
+}
+
+.form-field label {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-size: 13px !important;
+}
+
+.form-field input,
+.form-field select {
+  min-height: 42px !important;
+  padding: 10px 13px !important;
+}
+
+.form-field textarea {
+  min-height: 78px !important;
+  padding: 11px 13px !important;
+}
+
+.form-error {
+  font-size: 10px !important;
+}
+
+.continue-button,
+.back-step-button {
+  font-size: 11px !important;
+}
+/* ================= REVIEW & SUBMIT TYPOGRAPHY ================= */
+
+.review-details h3 {
+  font-size: 24px !important;
+}
+
+.review-details > p {
+  font-size: 13px !important;
+}
+
+.review-section-header h4 {
+  font-size: 14px !important;
+}
+
+.review-item span {
+  font-size: 10px !important;
+}
+
+.review-item strong {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+.review-edit-button {
+  font-size: 10px !important;
+}
+
+.review-details .register-form-actions button {
+  font-size: 12px !important;
+}
+/* =========================================================
+   REGISTRATION SUCCESS SCREEN
+   ========================================================= */
+
+.registration-success {
+  width: 100%;
+  max-width: 680px;
+  margin: 10px auto 0;
+  padding: 18px 22px 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Success Icon */
+.success-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #087bcf, #159be5);
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(8, 123, 207, 0.20);
+}
+
+/* Heading */
+.registration-success h3 {
+  margin: 0 0 7px;
+  color: #123e68;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/* Main Description */
+.registration-success > p {
+  max-width: 600px;
+  margin: 0 auto 14px;
+  color: #61758a;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.registration-success > p strong {
+  color: #087bcf;
+  font-weight: 700;
+}
+
+/* Application Status */
+.application-status-box {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 12px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border: 1px solid #d9e8f3;
+  border-radius: 10px;
+  background: #f7fbfe;
+  text-align: left;
+}
+
+.application-status-box span {
+  color: #71859a;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.application-status-box strong {
+  color: #c18a00;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* Information Message */
+.registration-success .success-info {
+  max-width: 520px;
+  margin: 0 auto 12px;
+  padding: 11px 14px;
+  box-sizing: border-box;
+  border-left: 3px solid #1689e5;
+  border-radius: 7px;
+  background: #f5faff;
+  color: #61758a;
+  font-size: 11px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.registration-success .success-info strong {
+  color: #1764b0;
+}
+
+/* Application ID */
+.application-id-box {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 18px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px dashed #9ec9e8;
+  border-radius: 9px;
+  background: #f8fcff;
+}
+
+.application-id-box span {
+  color: #8194a7;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.application-id-box strong {
+  color: #087bcf;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Back Home Button */
+.registration-success .continue-button {
+  min-width: 150px;
+  height: 42px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #087bcf, #159be5);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 7px 16px rgba(8, 123, 207, 0.18);
+  transition: all 0.2s ease;
+}
+
+.registration-success .continue-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgba(8, 123, 207, 0.24);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .registration-success {
+    max-width: 620px;
+    padding: 16px 18px 22px;
+  }
+
+  .application-status-box {
+    max-width: 100%;
+  }
+
+  .registration-success .success-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .registration-success {
+    padding: 14px 12px 20px;
+  }
+
+  .success-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 25px;
+  }
+
+  .registration-success h3 {
+    font-size: 19px;
+  }
+
+  .application-status-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .registration-success > p {
+    font-size: 11px;
+  }
+}
 
 
 
