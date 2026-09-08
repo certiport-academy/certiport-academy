@@ -1,0 +1,208 @@
+/* =========================================================
+   CERTIPORT ACADEMY SPLASH SCREEN
+   ========================================================= */
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  animation: splashFadeOut 0.45s ease forwards;
+  animation-delay: 1.55s;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  animation: splashLogoEntrance 0.9s ease-out forwards;
+}
+
+.splash-logo {
+  width: 210px;
+  height: auto;
+  object-fit: contain;
+
+  animation:
+    splashLogoFloat 1.4s ease-in-out infinite,
+    splashLogoGlow 1.5s ease-in-out infinite;
+}
+
+.splash-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  margin-top: 24px;
+}
+
+.splash-loader span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1689e5;
+
+  animation: splashDot 1s ease-in-out infinite;
+}
+
+.splash-loader span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.splash-loader span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes splashLogoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes splashLogoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes splashLogoGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(22, 137, 229, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 12px rgba(22, 137, 229, 0.28));
+  }
+}
+
+@keyframes splashDot {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes splashFadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+/* =========================================================
+   SPLASH BRAND MESSAGE
+   ========================================================= */
+
+.splash-message {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  animation: splashMessageReveal 0.8s ease-out 0.25s both;
+}
+
+.splash-message span {
+  color: #71859a;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.splash-message strong {
+  margin-top: 3px;
+  color: #087bcf;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.splash-message small {
+  margin-top: 5px;
+  color: #1689e5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MESSAGE ANIMATION
+   ========================================================= */
+
+@keyframes splashMessageReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .splash-message span {
+    font-size: 11px;
+  }
+
+  .splash-message strong {
+    font-size: 20px;
+  }
+
+  .splash-message small {
+    font-size: 8px;
+  }
+
+}

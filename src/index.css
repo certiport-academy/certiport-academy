@@ -51384,18 +51384,13 @@ header.navbar .nav-actions a.login-button:hover {
 }
 
 .verification-info-row span {
-  color: #71829a;
-  font-size: 8px;
-  font-weight: 650;
-  line-height: 1.2;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .verification-info-row strong {
-  color: #123c8c;
-  font-size: 11px;
-  font-weight: 850;
-  line-height: 1.3;
-  word-break: break-word;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 
@@ -55635,13 +55630,695 @@ body {
   line-height: 1.4 !important;
   color: #4f6f91 !important;
 }
+/* =================================================
+   MODULE-WISE RESULT — FINAL READABLE FONT
+================================================= */
+
+/* Table Header */
+.verification-module-table th {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  padding: 13px 12px !important;
+}
+
+/* Table Content */
+.verification-module-table td {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 14px 12px !important;
+  line-height: 1.4 !important;
+}
+
+/* Module Name */
+.verification-module-table td:first-child {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* Maximum & Obtained Marks */
+.verification-module-table td:nth-child(3),
+.verification-module-table td:nth-child(4) {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* PASS Button */
+.verification-pass-badge {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  padding: 6px 13px !important;
+}
+/* =================================================
+   MODULE-WISE RESULT — FINAL HEADING FIX
+================================================= */
+
+/* Show Exam Date column */
+.verification-module-table th:nth-child(2),
+.verification-module-table td:nth-child(2) {
+  display: table-cell !important;
+}
+
+/* Capital Case headings */
+.verification-module-table th {
+  text-transform: none !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+/* =================================================
+   VERIFIED BADGE — PROFESSIONAL FONT POLISH
+================================================= */
+
+.verification-badge-content strong {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+  line-height: 1.25 !important;
+}
+
+.verification-badge-content span {
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.35 !important;
+}
+/* =================================================
+   VERIFICATION DETAILS — PROFESSIONAL TYPOGRAPHY
+================================================= */
+
+/* Detail labels */
+.verification-three-column-row .verification-info-row span {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.1px !important;
+  line-height: 1.3 !important;
+}
+
+/* Detail values */
+.verification-three-column-row .verification-info-row strong {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* Training Center */
+.verification-three-column-row .verification-training-main span {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+}
+
+.verification-three-column-row .verification-training-main strong {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Training Center address */
+.verification-three-column-row .verification-training-main p {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Certificate information values */
+.verification-three-column-row .verification-certificate-card strong {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Certificate information labels */
+.verification-three-column-row .verification-certificate-card span {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.1px !important;
+}
+/* =================================================
+   VERIFICATION CARD HEADINGS — UNIFIED TYPOGRAPHY
+================================================= */
+
+.verification-info-card-heading span {
+  font-size: 16px !important;
+  font-weight: 650 !important;
+  letter-spacing: 0.1px !important;
+  line-height: 1.2 !important;
+}
+/* =================================================
+   VERIFICATION PAGE — CLEAN PROFESSIONAL TYPOGRAPHY
+================================================= */
+
+/* Main card headings */
+.verification-three-column-row
+.verification-info-card-heading span {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px !important;
+  line-height: 1.25 !important;
+}
+
+/* Card subtitles */
+.verification-three-column-row
+.verification-info-card-heading small {
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Detail labels */
+.verification-three-column-row
+.verification-info-row span {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Detail values */
+.verification-three-column-row
+.verification-info-row strong {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* Training Center label/value */
+.verification-three-column-row
+.verification-training-main span {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+}
+
+.verification-three-column-row
+.verification-training-main strong {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+.verification-three-column-row
+.verification-training-main p {
+  font-size: 10px !important;
+  font-weight: 400 !important;
+}
+
+/* Certificate information */
+.verification-three-column-row
+.verification-certificate-card span {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+}
+
+.verification-three-column-row
+.verification-certificate-card strong {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+/* Overall Performance heading */
+.verification-performance-card
+.verification-info-card-heading span {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+/* Overall Performance subtitle */
+.verification-performance-card
+.verification-info-card-heading small {
+  font-size: 10px !important;
+  font-weight: 400 !important;
+}
+/* =================================================
+   FINAL LIGHT TYPOGRAPHY POLISH
+================================================= */
+
+/* Main card headings */
+.verification-three-column-row
+.verification-info-card-heading span {
+  font-weight: 600 !important;
+}
+
+/* Card subtitles */
+.verification-three-column-row
+.verification-info-card-heading small {
+  font-weight: 400 !important;
+}
+
+/* Detail labels */
+.verification-three-column-row
+.verification-info-row span {
+  font-weight: 400 !important;
+}
+
+/* Detail values */
+.verification-three-column-row
+.verification-info-row strong {
+  font-weight: 500 !important;
+}
+
+/* Training Center */
+.verification-three-column-row
+.verification-training-main span {
+  font-weight: 400 !important;
+}
+
+.verification-three-column-row
+.verification-training-main strong {
+  font-weight: 500 !important;
+}
+
+/* Training Center address */
+.verification-three-column-row
+.verification-training-main p {
+  font-weight: 400 !important;
+}
+
+/* Certificate Information */
+.verification-three-column-row
+.verification-certificate-card span {
+  font-weight: 400 !important;
+}
+
+.verification-three-column-row
+.verification-certificate-card strong {
+  font-weight: 500 !important;
+}
+
+/* Overall Performance */
+.verification-performance-card
+.verification-info-card-heading span {
+  font-weight: 600 !important;
+}
+
+.verification-performance-card
+.verification-info-card-heading small {
+  font-weight: 400 !important;
+}
+/* =================================================
+   VERIFICATION DETAIL VALUES — FINAL SIZE
+================================================= */
+
+.verification-three-column-row
+.verification-info-row strong,
+.verification-three-column-row
+.verification-training-main strong,
+.verification-three-column-row
+.verification-certificate-card strong {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+}
+/* =================================================
+   ABOUT CORE — PERFECT CIRCLE BALANCE
+================================================= */
+
+.about-core {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+}
+
+/* Outer circular ring */
+.about-core-ring {
+  width: 116px !important;
+  height: 116px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+  box-sizing: border-box !important;
+
+  position: relative !important;
+  flex-shrink: 0 !important;
+}
+
+/* Inner circle */
+.about-core-inner {
+  width: 88px !important;
+  height: 88px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+  box-sizing: border-box !important;
+
+  text-align: center !important;
+
+  padding: 10px !important;
+}
+
+/* Graduation icon */
+.about-core-icon {
+  margin: 0 0 5px !important;
+  font-size: 15px !important;
+  line-height: 1 !important;
+}
+
+/* YOUR SUCCESS */
+.about-core-inner strong {
+  display: block !important;
+
+  margin: 0 !important;
+
+  font-size: 8px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+
+  letter-spacing: 0.35px !important;
+  white-space: nowrap !important;
+}
+
+/* IS OUR MISSION */
+.about-core-inner span {
+  display: block !important;
+
+  margin-top: 3px !important;
+
+  font-size: 6.5px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+
+  letter-spacing: 0.2px !important;
+  white-space: nowrap !important;
+}
+/* =================================================
+   ABOUT CORE — SMOOTH OUTER RING ANIMATION
+================================================= */
+
+.about-core-ring {
+  position: relative !important;
+}
+
+/* Animated outer ring */
+.about-core-ring::before {
+  content: "" !important;
+
+  position: absolute !important;
+  inset: 0 !important;
+
+  border-radius: 50% !important;
+
+  border: 3px solid transparent !important;
+
+  border-top-color: #1675c9 !important;
+  border-right-color: #1675c9 !important;
+  border-bottom-color: #f2b800 !important;
+
+  animation: aboutCoreRingRotate 5s linear infinite !important;
+
+  pointer-events: none !important;
+}
+
+/* Keep inner content perfectly stable */
+.about-core-inner {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Smooth rotation */
+@keyframes aboutCoreRingRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* =========================================================
+   HOME PAGE SCROLL REVEAL
+   ========================================================= */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.scroll-reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+/* =========================================================
+   HOME MOBILE — PREMIUM POLISH
+   Navbar + Hero + Feature Strip
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  /* =========================
+     NAVBAR
+     ========================= */
+
+  .navbar {
+    height: 64px;
+  }
+
+  .nav-container {
+    width: 100%;
+    padding: 0 14px;
+    gap: 8px;
+  }
+
+  .logo {
+    min-width: 0;
+    max-width: 145px;
+  }
+
+  .logo img {
+    width: 145px;
+    max-width: 100%;
+  }
+
+  .nav-actions {
+    gap: 6px;
+    margin-left: auto;
+  }
+
+  .login-button,
+  .register-button {
+    height: 36px;
+    padding: 0 11px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
 
 
+  /* =========================
+     HERO
+     ========================= */
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-container {
+    width: 100%;
+    padding: 30px 16px 42px;
+    gap: 30px;
+  }
+
+  .hero-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: clamp(32px, 9vw, 38px);
+    line-height: 1.12;
+    letter-spacing: -0.8px;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+    margin: 16px auto 0;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    margin-top: 22px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 9px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: 23px;
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .course-search {
+    width: 100%;
+    max-width: 100%;
+    height: 52px;
+    margin-top: 24px;
+    padding-left: 18px;
+    border-radius: 27px;
+  }
+
+  .course-search span {
+    font-size: 12px;
+  }
+
+  .course-search button {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* Stats */
+  .stats {
+    justify-content: center;
+    margin-top: 26px;
+  }
+
+  .stats div {
+    min-width: 0;
+    padding-right: 12px;
+    margin-right: 12px;
+  }
+
+  .stats strong {
+    font-size: 19px;
+  }
+
+  .stats span {
+    font-size: 10px;
+  }
 
 
+  /* =========================
+     HERO IMAGE
+     ========================= */
+
+  .hero-visual {
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 285px;
+    border-radius: 20px;
+  }
+
+  .hero-slide-image {
+    padding: 25px;
+    transform: scale(0.82);
+  }
+
+  .image-glow {
+    width: 190px;
+    height: 190px;
+  }
+
+  .visual-circle {
+    width: 135px;
+    height: 135px;
+    border-radius: 16px;
+  }
+
+  .visual-circle span {
+    font-size: 15px;
+  }
+
+  .visual-circle strong {
+    font-size: 23px;
+  }
+
+  .visual-label {
+    margin-top: 18px;
+    padding: 8px 15px;
+    font-size: 11px;
+  }
+
+  .student-badge {
+    left: 8px;
+    bottom: -8px;
+    min-width: 100px;
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .student-badge strong {
+    font-size: 10px;
+  }
+
+  .student-badge span {
+    font-size: 9px;
+  }
+
+  .slider-controls {
+    bottom: 14px;
+  }
 
 
+  /* =========================
+     FEATURE STRIP
+     ========================= */
 
+  .feature-strip {
+    padding: 22px 0;
+  }
 
+  .feature-container {
+    width: 92%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+
+  .feature-item {
+    gap: 9px;
+    min-width: 0;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    border-radius: 11px;
+    font-size: 19px;
+  }
+
+  .feature-item strong {
+    font-size: 12px;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
+  .feature-item span {
+    font-size: 10px;
+    line-height: 1.35;
+    white-space: normal;
+  }
+
+}

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
@@ -22,6 +22,8 @@ import Verification from "./pages/Verification";
 import OurPresence from "./components/OurPresence";
 import LoginPage from "./components/LoginPage";
 import RegisterInstitute from "./pages/RegisterInstitute";
+import SplashScreen from "./components/SplashScreen";
+import LocatePartner from "./pages/LocatePartner";
 
 
 
@@ -35,6 +37,49 @@ function ScrollToTop() {
 
   return null;
 }
+function ScrollReveal({ children }) {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const reveal = () => {
+      const rect = section.getBoundingClientRect();
+
+      if (
+        rect.top <= window.innerHeight * 0.85 &&
+        rect.bottom >= 0
+      ) {
+        section.classList.add("scroll-reveal-visible");
+      }
+    };
+
+    // Page load check
+    reveal();
+
+    // Scroll check
+    window.addEventListener("scroll", reveal, { passive: true });
+
+    // Resize check
+    window.addEventListener("resize", reveal);
+
+    return () => {
+      window.removeEventListener("scroll", reveal);
+      window.removeEventListener("resize", reveal);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={sectionRef}
+      className="scroll-reveal"
+    >
+      {children}
+    </div>
+  );
+}
 
 
 function HomePage() {
@@ -45,25 +90,45 @@ function HomePage() {
 
       <main>
 
-        <HeroSlider />
+        <ScrollReveal>
+          <HeroSlider />
+        </ScrollReveal>
 
-        <FeatureStrip />
+        <ScrollReveal>
+          <FeatureStrip />
+        </ScrollReveal>
 
-        <AboutSection />
+        <ScrollReveal>
+          <AboutSection />
+        </ScrollReveal>
 
-        <CertificateShowcase />
+        <ScrollReveal>
+          <CertificateShowcase />
+        </ScrollReveal>
 
-        <CoursesSection />
+        <ScrollReveal>
+          <CoursesSection />
+        </ScrollReveal>
 
-        <OnlineExamsSection />
+        <ScrollReveal>
+          <OnlineExamsSection />
+        </ScrollReveal>
 
-        <WhyChooseUs />
+        <ScrollReveal>
+          <WhyChooseUs />
+        </ScrollReveal>
 
-        <TestimonialsSection />
+        <ScrollReveal>
+          <TestimonialsSection />
+        </ScrollReveal>
 
-        <AssessmentPartners />
+        <ScrollReveal>
+          <AssessmentPartners />
+        </ScrollReveal>
 
-        <Footer />
+        <ScrollReveal>
+          <Footer />
+        </ScrollReveal>
 
       </main>
 
@@ -74,8 +139,10 @@ function HomePage() {
 
 function App() {
   return (
+    <>
+      <SplashScreen />
 
-    <BrowserRouter>
+      <BrowserRouter>
     <ScrollToTop />
 
       <Routes>
@@ -251,6 +318,20 @@ function App() {
     </div>
   }
 />
+<Route
+  path="/partners/locate-a-partner"
+  element={
+    <div className="site">
+      <Navbar />
+
+      <main>
+        <LocatePartner />
+      </main>
+
+      <Footer />
+    </div>
+  }
+/>
       {/* PRODUCT DETAILS */}
 
 <Route
@@ -269,10 +350,10 @@ function App() {
     </div>
   }
 />
-      </Routes>
+            </Routes>
 
-    </BrowserRouter>
-
+      </BrowserRouter>
+    </>
   );
 }
 

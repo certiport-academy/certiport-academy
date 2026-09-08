@@ -448,7 +448,7 @@ function Verification() {
         <div className="verification-info-row-icon">🪪</div>
         <div>
           <span>Roll Number</span>
-          <strong>CA-123456</strong>
+          <strong>123456</strong>
         </div>
       </div>
 
@@ -624,7 +624,7 @@ function Verification() {
     >
 
       <span className="verification-module-toggle-title">
-        MODULE-WISE RESULT
+        EXAM SUMMARY
       </span>
 
       <span className="verification-module-toggle-action">
@@ -670,12 +670,12 @@ function Verification() {
 
           <thead>
             <tr>
-              <th>Module Name</th>
-              <th>Exam Mode</th>
-              <th>Exam Date</th>
-              <th>Maximum Marks</th>
-              <th>Obtained Marks</th>
-              <th>Result</th>
+              <th>MODULE NAME</th>
+              <th>EXAM MODE</th>
+              <th>EXAM DATE</th>
+              <th>MAXIMUM MARKS</th>
+              <th>OBTINED MARKS</th>
+              <th>RESULT</th>
             </tr>
           </thead>
 
