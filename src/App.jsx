@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import "./App.css";
 
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
@@ -24,6 +25,7 @@ import LoginPage from "./components/LoginPage";
 import RegisterInstitute from "./pages/RegisterInstitute";
 import SplashScreen from "./components/SplashScreen";
 import LocatePartner from "./pages/LocatePartner";
+import Gallery from "./pages/Gallery";
 
 
 
@@ -328,6 +330,18 @@ function App() {
         <LocatePartner />
       </main>
 
+      <Footer />
+    </div>
+  }
+/>
+<Route
+  path="/gallery"
+  element={
+    <div className="site">
+      <Navbar />
+      <main>
+        <Gallery />
+      </main>
       <Footer />
     </div>
   }

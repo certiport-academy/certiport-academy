@@ -1,0 +1,1147 @@
+/* =========================================================
+   PARTNER WITH US — FRESH PAGE
+   HERO SECTION
+========================================================= */
+
+.partner-with-us-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+.partner-with-us-hero {
+  position: relative;
+  min-height: 500px;
+  padding: 48px 40px 35px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 82% 42%,
+      rgba(54, 176, 255, 0.24),
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      #063f7a 0%,
+      #075da7 50%,
+      #087dcc 100%
+    );
+
+  color: #ffffff;
+}
+
+.partner-hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1180px;
+  min-height: 420px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+
+  align-items: center;
+  gap: 55px;
+}
+
+.partner-hero-content {
+  max-width: 600px;
+}
+
+.partner-hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  color: #ffd21c;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+}
+
+.partner-hero-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 4.4vw, 60px);
+  line-height: 1.02;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.partner-hero-accent {
+  width: 60px;
+  height: 4px;
+
+  margin: 20px 0 18px;
+
+  border-radius: 10px;
+
+  background: #ffd21c;
+}
+
+.partner-hero-content > p {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.partner-hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 22px;
+}
+
+.partner-hero-highlights > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.partner-hero-highlights b {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffd21c;
+  color: #075da7;
+
+  font-size: 10px;
+}
+
+.partner-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  margin-top: 20px;
+
+  padding: 13px 20px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #075da7;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 25px rgba(0, 25, 65, 0.20);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.partner-hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 17px 30px rgba(0, 25, 65, 0.26);
+}
+
+.partner-hero-btn span {
+  font-size: 18px;
+  line-height: 1;
+}
+/* =========================================================
+   PARTNER WITH US — HERO RIGHT VISUAL
+========================================================= */
+
+.partner-hero-visual {
+  position: relative;
+  min-height: 380px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-orbit {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+}
+
+.partner-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 42px;
+
+  border: 1px solid rgba(255, 210, 28, 0.30);
+  border-radius: 50%;
+}
+
+.partner-main-card {
+  position: relative;
+  z-index: 3;
+
+  width: 270px;
+  min-height: 350px;
+
+  padding: 28px 25px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 22px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(16, 126, 210, 0.95),
+    rgba(5, 76, 145, 0.96)
+  );
+
+  box-shadow:
+    0 25px 55px rgba(0, 25, 65, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  color: #ffffff;
+}
+
+.partner-main-card small {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #ffd21c;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.partner-main-card .card-icon {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.partner-main-card h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 34px;
+  line-height: 0.98;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.partner-main-card .card-line {
+  width: 44px;
+  height: 4px;
+
+  margin: 22px 0 17px;
+
+  border-radius: 10px;
+
+  background: #ffd21c;
+}
+
+.partner-main-card p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+/* Floating cards */
+
+.partner-floating-card {
+  position: absolute;
+  z-index: 5;
+
+  min-width: 105px;
+  padding: 14px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  box-shadow: 0 14px 30px rgba(0, 30, 70, 0.20);
+
+  color: #075da7;
+}
+
+.partner-floating-card small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #1680c8;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.partner-floating-card strong {
+  display: block;
+
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 850;
+}
+
+.partner-floating-card span {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 18px;
+}
+
+/* Positions */
+
+.partner-floating-card.connect {
+  top: 55px;
+  right: 55px;
+
+  transform: rotate(5deg);
+}
+
+.partner-floating-card.grow {
+  left: 55px;
+  bottom: 50px;
+
+  transform: rotate(-5deg);
+}
+
+.partner-floating-card.succeed {
+  right: 70px;
+  bottom: 35px;
+
+  transform: rotate(4deg);
+}
+
+/* =========================================================
+   HERO VISUAL — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .partner-hero-visual {
+    min-height: 420px;
+  }
+
+  .partner-orbit {
+    width: 320px;
+    height: 320px;
+  }
+
+  .partner-main-card {
+    width: 250px;
+    min-height: 325px;
+  }
+
+  .partner-floating-card.connect {
+    right: 25px;
+  }
+
+  .partner-floating-card.grow {
+    left: 25px;
+  }
+
+  .partner-floating-card.succeed {
+    right: 35px;
+  }
+}
+
+/* =========================================================
+   HERO VISUAL — MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .partner-hero-visual {
+    min-height: 390px;
+  }
+
+  .partner-orbit {
+    width: 290px;
+    height: 290px;
+  }
+
+  .partner-main-card {
+    width: 225px;
+    min-height: 295px;
+    padding: 23px 21px;
+  }
+
+  .partner-main-card h2 {
+    font-size: 29px;
+  }
+
+  .partner-floating-card {
+    min-width: 88px;
+    padding: 11px 12px;
+  }
+
+  .partner-floating-card strong {
+    font-size: 13px;
+  }
+
+  .partner-floating-card.connect {
+    top: 40px;
+    right: 8px;
+  }
+
+  .partner-floating-card.grow {
+    left: 8px;
+    bottom: 42px;
+  }
+
+  .partner-floating-card.succeed {
+    right: 15px;
+    bottom: 28px;
+  }
+}
+/* FINAL HERO HEIGHT OVERRIDE */
+
+.partner-with-us-page .partner-with-us-hero {
+  min-height: 500px !important;
+  padding: 38px 40px 28px !important;
+  box-sizing: border-box;
+}
+
+.partner-with-us-page .partner-hero-container {
+  min-height: 420px !important;
+}
+
+.partner-with-us-page .partner-hero-visual {
+  min-height: 380px !important;
+}
+/* =========================================================
+   FINAL HERO — LEFT CONTENT COMPACT
+========================================================= */
+
+.partner-with-us-page .partner-hero-eyebrow {
+  margin-bottom: 8px;
+}
+
+.partner-with-us-page .partner-hero-content h1 {
+  font-size: clamp(40px, 4.1vw, 56px);
+  line-height: 0.98;
+}
+
+.partner-with-us-page .partner-hero-accent {
+  margin: 14px 0 13px;
+}
+
+.partner-with-us-page .partner-hero-content > p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.partner-with-us-page .partner-hero-highlights {
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.partner-with-us-page .partner-hero-highlights > div {
+  padding: 7px 11px;
+  font-size: 11px;
+}
+
+.partner-with-us-page .partner-hero-btn {
+  margin-top: 14px;
+  padding: 12px 19px;
+}
+/* =========================================================
+   PARTNERSHIP OPPORTUNITIES
+========================================================= */
+
+.partner-opportunities {
+  padding: 75px 40px;
+  background: #ffffff;
+}
+
+.partner-opportunities-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Section Heading */
+
+.partner-opportunities-heading {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.partner-opportunities-heading .section-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: #087dcc;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.partner-opportunities-heading h2 {
+  margin: 0;
+
+  color: #12365a;
+
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.08;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+}
+
+.partner-opportunities-heading p {
+  max-width: 620px;
+  margin: 14px auto 0;
+
+  color: #66788c;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Cards Grid */
+
+.partner-opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Individual Card */
+
+.partner-opportunity-card {
+  position: relative;
+
+  padding: 27px 24px 25px;
+
+  border: 1px solid #e4edf5;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 10px 28px rgba(15, 65, 110, 0.07);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.partner-opportunity-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #075da7,
+    #36b0ff
+  );
+}
+
+.partner-opportunity-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #cfe3f2;
+
+  box-shadow: 0 18px 38px rgba(15, 65, 110, 0.12);
+}
+
+/* Icon */
+
+.partner-opportunity-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 13px;
+
+  background: #edf7ff;
+
+  color: #087dcc;
+
+  font-size: 23px;
+}
+
+/* Card Content */
+
+.partner-opportunity-card h3 {
+  margin: 0 0 9px;
+
+  color: #12365a;
+
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.partner-opportunity-card p {
+  margin: 0;
+
+  color: #718196;
+
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   PARTNERSHIP OPPORTUNITIES — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .partner-opportunities {
+    padding: 60px 30px;
+  }
+
+  .partner-opportunities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   PARTNERSHIP OPPORTUNITIES — MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .partner-opportunities {
+    padding: 52px 18px;
+  }
+
+  .partner-opportunities-heading {
+    margin-bottom: 30px;
+  }
+
+  .partner-opportunities-heading h2 {
+    font-size: 29px;
+  }
+
+  .partner-opportunities-heading p {
+    font-size: 12px;
+  }
+
+  .partner-opportunities-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .partner-opportunity-card {
+    padding: 23px 20px;
+  }
+
+  .partner-opportunity-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 15px;
+  }
+
+  .partner-opportunity-card h3 {
+    font-size: 16px;
+  }
+
+  .partner-opportunity-card p {
+    font-size: 12px;
+  }
+}
+/* =========================================================
+   HERO RIGHT VISUAL — FINAL POSITION
+========================================================= */
+
+.partner-with-us-page .partner-hero-visual {
+  min-height: 380px !important;
+  transform: translateY(0);
+}
+
+/* Main card */
+
+.partner-with-us-page .partner-main-card {
+  width: 250px;
+  min-height: 330px;
+
+  padding: 25px 23px;
+
+  transform: translateY(0);
+}
+
+/* Orbit */
+
+.partner-with-us-page .partner-orbit {
+  width: 350px;
+  height: 350px;
+}
+
+/* Connect */
+
+.partner-with-us-page .partner-floating-card.connect {
+  top: 38px;
+  right: 55px;
+
+  transform: rotate(5deg);
+}
+
+/* Grow */
+
+.partner-with-us-page .partner-floating-card.grow {
+  left: 58px;
+  bottom: 30px;
+
+  transform: rotate(-5deg);
+}
+
+/* Succeed */
+
+.partner-with-us-page .partner-floating-card.succeed {
+  right: 62px;
+  bottom: 20px;
+
+  transform: rotate(4deg);
+}
+.partner-with-us-page .partner-hero-visual {
+  transform: translateY(-10px);
+}
+/* =========================================================
+   WORK WITH US HERO — CONTENT OVERLAP FIX
+========================================================= */
+
+.partner-with-us-page .partner-hero-container {
+  grid-template-columns: minmax(560px, 1.05fr) minmax(480px, 0.95fr) !important;
+  gap: 35px !important;
+  max-width: 1240px !important;
+}
+
+.partner-with-us-page .partner-hero-content {
+  max-width: 680px !important;
+  position: relative;
+  z-index: 10;
+}
+
+.partner-with-us-page .partner-hero-content h1 {
+  max-width: 650px !important;
+
+  font-size: clamp(42px, 4vw, 56px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.045em !important;
+}
+
+/* Keep all three highlights together */
+
+.partner-with-us-page .partner-hero-highlights {
+  width: 100%;
+  max-width: 650px;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+}
+
+.partner-with-us-page .partner-hero-highlights > div {
+  white-space: nowrap;
+}
+
+/* Button stays safely below highlights */
+
+.partner-with-us-page .partner-hero-btn {
+  position: relative;
+  z-index: 10;
+}
+
+/* Keep graphic inside its own column */
+
+.partner-with-us-page .partner-hero-visual {
+  min-width: 0;
+  position: relative;
+  z-index: 3;
+}
+/* =========================================================
+   WORK WITH US HERO — PROPER TWO COLUMN LAYOUT
+========================================================= */
+
+.partner-with-us-page .partner-hero-container {
+  grid-template-columns: 650px minmax(0, 1fr) !important;
+  gap: 40px !important;
+  max-width: 1240px !important;
+}
+
+/* LEFT CONTENT */
+
+.partner-with-us-page .partner-hero-content {
+  width: 100% !important;
+  max-width: 650px !important;
+}
+
+.partner-with-us-page .partner-hero-content h1 {
+  width: 100% !important;
+  max-width: 650px !important;
+
+  font-size: 56px !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.045em !important;
+}
+
+/* Paragraph */
+
+.partner-with-us-page .partner-hero-content > p {
+  max-width: 570px !important;
+}
+
+/* Highlights */
+
+.partner-with-us-page .partner-hero-highlights {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  max-width: 650px !important;
+
+  margin-top: 18px !important;
+  gap: 9px !important;
+}
+
+.partner-with-us-page .partner-hero-highlights > div {
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+}
+
+/* Button must come AFTER highlights */
+
+.partner-with-us-page .partner-hero-btn {
+  display: inline-flex !important;
+
+  margin-top: 20px !important;
+
+  position: relative !important;
+  clear: both !important;
+}
+
+/* RIGHT VISUAL */
+
+.partner-with-us-page .partner-hero-visual {
+  width: 100% !important;
+  min-width: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  transform: translateY(-8px) !important;
+}
+
+/* Keep graphic away from left content */
+
+.partner-with-us-page .partner-main-card {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================================================
+   PREVENT HERO CONTENT FROM BEING COVERED
+========================================================= */
+
+.partner-with-us-page .partner-hero-content,
+.partner-with-us-page .partner-hero-btn,
+.partner-with-us-page .partner-hero-highlights {
+  position: relative;
+  z-index: 20;
+}
+/* =========================================================
+   WORK WITH US HERO — FINAL BALANCED LAYOUT
+========================================================= */
+
+.partner-with-us-page .partner-hero-container {
+  grid-template-columns: 590px minmax(0, 1fr) !important;
+  gap: 70px !important;
+  max-width: 1240px !important;
+}
+
+/* LEFT CONTENT */
+
+.partner-with-us-page .partner-hero-content {
+  max-width: 590px !important;
+}
+
+.partner-with-us-page .partner-hero-content h1 {
+  max-width: 570px !important;
+
+  font-size: 56px !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.045em !important;
+}
+
+/* Paragraph */
+
+.partner-with-us-page .partner-hero-content > p {
+  max-width: 540px !important;
+
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+
+/* Highlights */
+
+.partner-with-us-page .partner-hero-highlights {
+  max-width: 590px !important;
+  margin-top: 17px !important;
+  gap: 9px !important;
+}
+
+.partner-with-us-page .partner-hero-highlights > div {
+  padding: 7px 11px !important;
+  font-size: 11px !important;
+}
+
+/* Button */
+
+.partner-with-us-page .partner-hero-btn {
+  margin-top: 18px !important;
+}
+
+/* RIGHT SIDE */
+
+.partner-with-us-page .partner-hero-visual {
+  transform: translate(15px, -8px) !important;
+}
+/* =========================================================
+   HERO — FINAL HEADING COMPOSITION
+========================================================= */
+
+.partner-with-us-page .partner-hero-container {
+  grid-template-columns: 520px minmax(0, 1fr) !important;
+  gap: 85px !important;
+}
+
+.partner-with-us-page .partner-hero-content {
+  max-width: 520px !important;
+}
+
+.partner-with-us-page .partner-hero-content h1 {
+  max-width: 510px !important;
+  font-size: 56px !important;
+  line-height: 1.02 !important;
+}
+
+/* Keep paragraph inside left column */
+
+.partner-with-us-page .partner-hero-content > p {
+  max-width: 500px !important;
+}
+
+/* Keep graphic clearly separated */
+
+.partner-with-us-page .partner-hero-visual {
+  transform: translate(5px, -8px) !important;
+}
+/* =========================================================
+   HERO — EXPLORE OPPORTUNITIES BUTTON POSITION
+========================================================= */
+
+.partner-with-us-page .partner-hero-btn {
+  margin-top: 20px !important;
+}
+/* =========================================================
+   HERO — EXPLORE BUTTON HOVER FIX
+========================================================= */
+
+.partner-with-us-page .partner-hero-btn {
+  transform: translateY(0) !important;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease !important;
+}
+
+.partner-with-us-page .partner-hero-btn:hover {
+  transform: translateY(-1px) !important;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 18px rgba(0, 25, 65, 0.20) !important;
+}
+
+.partner-with-us-page .partner-hero-btn span {
+  transform: translateY(0) !important;
+  transition: transform 0.2s ease;
+}
+
+.partner-with-us-page .partner-hero-btn:hover span {
+  transform: translateX(3px) !important;
+}
+.partner-with-us-page .partner-hero-content {
+  transform: translateY(-8px);
+}
+/* HERO HEADING — MORE BREATHING SPACE */
+
+.partner-with-us-page .partner-hero-content h1 {
+  line-height: 1.10 !important;
+}
+/* HERO HEADING — LIGHTER WEIGHT */
+
+.partner-with-us-page .partner-hero-content h1 {
+  font-weight: 720 !important;
+}
+/* Work With Us Hero - Clean Content Hierarchy */
+.work-with-us-hero h1 {
+  max-width: 560px;
+  font-size: 56px;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin-bottom: 18px;
+}
+
+.work-with-us-hero p {
+  max-width: 540px;
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.work-with-us-hero .hero-features {
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.work-with-us-hero .hero-features span {
+  padding: 8px 13px;
+  font-size: 12px;
+}
+/* =========================================================
+   WORK WITH US HERO — CLEAN LEFT CONTENT
+========================================================= */
+
+.partner-with-us-page .partner-hero-content h1 {
+  max-width: 500px !important;
+  font-size: 52px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.04em !important;
+  font-weight: 720 !important;
+}
+
+.partner-with-us-page .partner-hero-content > p {
+  max-width: 480px !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  margin-top: 16px !important;
+}
+
+.partner-with-us-page .partner-hero-highlights {
+  max-width: 500px !important;
+  margin-top: 20px !important;
+  gap: 8px !important;
+}
+
+.partner-with-us-page .partner-hero-highlights > div {
+  padding: 7px 11px !important;
+  font-size: 10.5px !important;
+}
+
+.partner-with-us-page .partner-hero-btn {
+  margin-top: 18px !important;
+}
+/* =========================================================
+   WORK WITH US HERO — SUBTLE FLOATING CARDS
+========================================================= */
+
+.partner-with-us-page .partner-floating-card {
+  opacity: 0.88;
+  transform: scale(0.92);
+  box-shadow: 0 10px 24px rgba(0, 30, 70, 0.14);
+}
+
+.partner-with-us-page .partner-floating-card.connect {
+  transform: scale(0.92) rotate(5deg);
+}
+
+.partner-with-us-page .partner-floating-card.grow {
+  transform: scale(0.92) rotate(-5deg);
+}
+
+.partner-with-us-page .partner-floating-card.succeed {
+  transform: scale(0.92) rotate(4deg);
+}
+/* =========================================================
+   WORK WITH US HERO — SUBTLE ORBIT
+========================================================= */
+
+.partner-with-us-page .partner-orbit {
+  opacity: 0.55;
+}
+
+.partner-with-us-page .partner-orbit::before {
+  opacity: 0.55;
+}
+/* =========================================================
+   WORK WITH US HERO — MAIN CARD POLISH
+========================================================= */
+
+.partner-with-us-page .partner-main-card {
+  box-shadow:
+    0 20px 45px rgba(0, 25, 65, 0.22),
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20) !important;
+
+  border-color: rgba(255, 255, 255, 0.32);
+}
+/* =========================================================
+   WORK WITH US HERO — BACKGROUND POLISH
+========================================================= */
+
+.partner-with-us-page .partner-with-us-hero {
+  background:
+    radial-gradient(
+      circle at 82% 42%,
+      rgba(54, 176, 255, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      #063f7a 0%,
+      #075da7 50%,
+      #087dcc 100%
+    );
+}

@@ -3037,6 +3037,16 @@ body {
     font-size: 11px;
   }
 }
+/* =========================================================
+   WORK WITH US HERO — STATS BAR POLISH
+========================================================= */
+
+.partner-with-us-page .partner-hero-stats {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 12px 30px rgba(0, 25, 65, 0.12);
+  backdrop-filter: blur(6px);
+}
 
 
 

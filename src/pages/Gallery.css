@@ -1,0 +1,1064 @@
+/* =========================================================
+   GALLERY PAGE — HERO
+========================================================= */
+
+.gallery-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-hero {
+  position: relative;
+  min-height: 360px;
+  padding: 85px 40px 70px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 82% 35%,
+      rgba(54, 176, 255, 0.22),
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      #063f7a 0%,
+      #075da7 52%,
+      #087dcc 100%
+    );
+
+  color: #ffffff;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.gallery-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  color: #ffd21c;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+}
+
+.gallery-container h1 {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1.02;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.gallery-container h1 span {
+  display: block;
+  color: #ffd21c;
+}
+
+.gallery-container p {
+  max-width: 610px;
+
+  margin: 20px 0 0;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .gallery-hero {
+    min-height: 320px;
+    padding: 65px 20px 55px;
+  }
+
+  .gallery-eyebrow {
+    font-size: 10px;
+    margin-bottom: 11px;
+  }
+
+  .gallery-container h1 {
+    font-size: 38px;
+  }
+
+  .gallery-container p {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+/* =========================================================
+   GALLERY — IMAGE GRID
+========================================================= */
+
+.gallery-grid-section {
+  padding: 75px 40px 90px;
+  background: #f7faff;
+}
+
+.gallery-section-heading {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.gallery-section-heading > span {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: #087dcc;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.gallery-section-heading h2 {
+  margin: 0;
+
+  color: #12365a;
+
+  font-size: clamp(30px, 3.5vw, 42px);
+  line-height: 1.1;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.gallery-section-heading p {
+  max-width: 600px;
+  margin: 14px auto 0;
+
+  color: #718196;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Grid */
+
+.gallery-grid {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 190px;
+  gap: 16px;
+}
+
+.gallery-item {
+  position: relative;
+
+  min-width: 0;
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #eaf3fa;
+
+  box-shadow: 0 8px 25px rgba(15, 65, 110, 0.08);
+}
+
+.gallery-item-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dceefa,
+      #edf7ff
+    );
+
+  color: #075da7;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  text-align: center;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.gallery-item:hover .gallery-placeholder {
+  transform: scale(1.04);
+
+  background:
+    linear-gradient(
+      135deg,
+      #cfe9fa,
+      #e5f4ff
+    );
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .gallery-grid-section {
+    padding: 60px 30px 70px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .gallery-grid-section {
+    padding: 50px 18px 60px;
+  }
+
+  .gallery-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .gallery-section-heading h2 {
+    font-size: 29px;
+  }
+
+  .gallery-section-heading p {
+    font-size: 12px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 190px;
+    gap: 12px;
+  }
+
+  .gallery-item-large {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .gallery-placeholder {
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   GALLERY — REAL IMAGE
+========================================================= */
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.04);
+}
+/* =========================================================
+   GALLERY — CATEGORY FILTER
+========================================================= */
+
+.gallery-filters {
+  max-width: 1180px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.gallery-filter {
+  padding: 9px 16px;
+
+  border: 1px solid #d8e6f1;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #45657f;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gallery-filter:hover {
+  transform: translateY(-1px);
+  border-color: #087dcc;
+  color: #087dcc;
+}
+
+.gallery-filter.active {
+  border-color: #087dcc;
+  background: #087dcc;
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .gallery-filters {
+    gap: 7px;
+    margin-bottom: 22px;
+  }
+
+  .gallery-filter {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+}
+/* =========================================================
+   GALLERY — PREMIUM LIGHTBOX
+========================================================= */
+
+.gallery-item {
+  cursor: zoom-in;
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 90px;
+
+  background: rgba(3, 18, 38, 0.92);
+  backdrop-filter: blur(8px);
+
+  animation: galleryLightboxIn 0.22s ease;
+}
+
+.gallery-lightbox-image {
+  max-width: min(1000px, 88vw);
+  max-height: 84vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.45);
+
+  animation: galleryImageIn 0.25s ease;
+}
+
+.gallery-lightbox-close,
+.gallery-lightbox-prev,
+.gallery-lightbox-next {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(6px);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gallery-lightbox-close:hover,
+.gallery-lightbox-prev:hover,
+.gallery-lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.gallery-lightbox-close {
+  top: 24px;
+  right: 28px;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  font-size: 28px;
+  line-height: 1;
+}
+
+.gallery-lightbox-prev,
+.gallery-lightbox-next {
+  top: 50%;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  font-size: 34px;
+  line-height: 1;
+
+  transform: translateY(-50%);
+}
+
+.gallery-lightbox-prev {
+  left: 24px;
+}
+
+.gallery-lightbox-next {
+  right: 24px;
+}
+
+.gallery-lightbox-prev:hover,
+.gallery-lightbox-next:hover {
+  transform: translateY(-50%) scale(1.06);
+}
+
+@keyframes galleryLightboxIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes galleryImageIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-lightbox {
+    padding: 30px 55px;
+  }
+
+  .gallery-lightbox-image {
+    max-width: 90vw;
+    max-height: 76vh;
+    border-radius: 8px;
+  }
+
+  .gallery-lightbox-close {
+    top: 14px;
+    right: 14px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 25px;
+  }
+
+  .gallery-lightbox-prev,
+  .gallery-lightbox-next {
+    width: 38px;
+    height: 38px;
+
+    font-size: 28px;
+  }
+
+  .gallery-lightbox-prev {
+    left: 10px;
+  }
+
+  .gallery-lightbox-next {
+    right: 10px;
+  }
+}
+/* =========================================================
+   GALLERY — LIGHTBOX COUNTER
+========================================================= */
+
+.gallery-lightbox-counter {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  padding: 7px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.10);
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  backdrop-filter: blur(6px);
+}
+
+@media (max-width: 640px) {
+  .gallery-lightbox-counter {
+    bottom: 14px;
+    font-size: 10px;
+  }
+}
+/* =========================================================
+   GALLERY — FINAL CARD POLISH
+========================================================= */
+
+.gallery-grid {
+  gap: 18px;
+}
+
+.gallery-item {
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 24px rgba(15, 65, 110, 0.08);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 16px 34px rgba(15, 65, 110, 0.14);
+}
+
+.gallery-image {
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.045);
+  filter: brightness(1.04);
+}
+/* =========================================================
+   GALLERY — PREMIUM FILTER POLISH
+========================================================= */
+
+.gallery-filters {
+  margin-bottom: 34px;
+  gap: 10px;
+}
+
+.gallery-filter {
+  min-height: 38px;
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  letter-spacing: 0.01em;
+
+  box-shadow: 0 3px 10px rgba(15, 65, 110, 0.04);
+}
+
+.gallery-filter.active {
+  box-shadow: 0 6px 16px rgba(8, 125, 204, 0.18);
+}
+
+.gallery-filter:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .gallery-filters {
+    margin-bottom: 25px;
+    gap: 7px;
+  }
+
+  .gallery-filter {
+    min-height: 34px;
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+}
+/* =========================================================
+   GALLERY — FINAL MOBILE POLISH
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .gallery-hero {
+    min-height: 300px;
+    padding: 58px 20px 48px;
+  }
+
+  .gallery-container {
+    width: 100%;
+  }
+
+  .gallery-container h1 {
+    font-size: 36px;
+    line-height: 1.06;
+  }
+
+  .gallery-container p {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .gallery-grid-section {
+    padding: 48px 16px 60px;
+  }
+
+  .gallery-section-heading {
+    margin-bottom: 26px;
+  }
+
+  .gallery-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .gallery-section-heading p {
+    font-size: 12px;
+  }
+
+  /* Filter buttons */
+
+  .gallery-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+
+    flex-wrap: nowrap;
+
+    padding: 2px 2px 8px;
+
+    scrollbar-width: none;
+  }
+
+  .gallery-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-filter {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* Gallery */
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 205px;
+    gap: 12px;
+  }
+
+  .gallery-item,
+  .gallery-item-large {
+    grid-column: span 1;
+    grid-row: span 1;
+
+    border-radius: 15px;
+  }
+
+  /* Lightbox */
+
+  .gallery-lightbox {
+    padding: 25px 48px;
+  }
+
+  .gallery-lightbox-image {
+    max-width: 92vw;
+    max-height: 72vh;
+  }
+}
+/* =========================================================
+   GALLERY HERO — FEMALE VISUAL
+========================================================= */
+
+.gallery-hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gallery-hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+/* =========================================================
+   GALLERY HERO — FEMALE VISUAL SIZE & POSITION
+========================================================= */
+
+.gallery-hero-image {
+  position: absolute;
+  top: 0;
+  right: -35px;
+  width: 62%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gallery-hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.gallery-hero .gallery-container {
+  position: relative;
+  z-index: 3;
+}
+.gallery-hero-image {
+  right: 15px;
+  width: 64%;
+}
+
+.gallery-hero-image img {
+  object-position: center right;
+}
+/* =========================================================
+   GALLERY HERO — PREMIUM BACKGROUND SHAPES
+========================================================= */
+
+.gallery-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(37, 177, 255, 0.55),
+      transparent 34%
+    ),
+    linear-gradient(
+      120deg,
+      #064985 0%,
+      #075da7 48%,
+      #087fd0 100%
+    );
+}
+
+/* Large soft curved shape */
+.gallery-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 720px;
+  height: 720px;
+
+  right: 15%;
+  top: -410px;
+
+  border-radius: 50%;
+
+  background: rgba(70, 194, 255, 0.16);
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Lower curved glow */
+.gallery-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  left: 36%;
+  bottom: -520px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 125, 220, 0.30);
+
+  z-index: 0;
+  pointer-events: none;
+}
+/* =========================================================
+   GALLERY HERO — MODERN BALANCED LAYOUT
+   Female image size unchanged
+========================================================= */
+
+.gallery-hero .gallery-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Bring the visual slightly closer without changing its size */
+.gallery-hero-image {
+  right: 70px;
+}
+
+/* Give the text area a little more visual presence */
+.gallery-hero .gallery-container {
+  max-width: 1240px;
+}
+
+.gallery-hero h1 {
+  max-width: 680px;
+  letter-spacing: -0.045em;
+}
+
+.gallery-hero p {
+  max-width: 590px;
+  line-height: 1.7;
+}
+/* =========================================================
+   GALLERY HERO — FINAL VISUAL BALANCE
+========================================================= */
+
+.gallery-hero-image {
+  transform: translateX(-80px);
+}
+
+.gallery-hero .gallery-container {
+  padding-right: 0;
+}
+
+.gallery-hero h1 {
+  max-width: 720px;
+}
+/* =========================================================
+   GALLERY HERO — FINAL DESKTOP BALANCE
+========================================================= */
+
+.gallery-hero-image {
+  right: 150px;
+  transform: translateX(-55px);
+}
+
+.gallery-hero .gallery-container {
+  padding-left: 35px;
+}
+
+.gallery-hero h1 {
+  margin-bottom: 18px;
+}
+
+.gallery-hero p {
+  margin-top: 0;
+}
+/* =========================================================
+   GALLERY HERO — DECORATIVE POLISH
+========================================================= */
+
+.gallery-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Large soft curved circle */
+.gallery-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 720px;
+  height: 720px;
+
+  top: -420px;
+  left: 32%;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Lower curved circle */
+.gallery-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  right: 18%;
+  bottom: -520px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  pointer-events: none;
+  z-index: 0;
+}
+/* =========================================================
+   GALLERY HERO — DECORATIVE DOTS
+========================================================= */
+
+.gallery-hero-dots {
+  position: absolute;
+
+  width: 110px;
+  height: 90px;
+
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.30) 2px,
+    transparent 2px
+  );
+
+  background-size: 18px 18px;
+
+  opacity: 0.55;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-hero-dots-left {
+  left: 35px;
+  bottom: 35px;
+}
+
+.gallery-hero-dots-right {
+  right: 45px;
+  bottom: 55px;
+}
+/* =========================================================
+   GALLERY HERO — SUBTLE CURVED LINE
+========================================================= */
+
+.gallery-hero .gallery-container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 120px;
+
+  right: 160px;
+  top: 75px;
+
+  border-top: 2px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+
+  transform: rotate(8deg);
+
+  pointer-events: none;
+  z-index: 1;
+}
+/* Subtle floating hero accents */
+.gallery-hero .gallery-container::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 330px;
+  top: 115px;
+  border: 2px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+}
+/* Gallery section spacing polish */
+.gallery-grid-section {
+  padding-top: 68px;
+  padding-bottom: 80px;
+}
+
+.gallery-section-heading {
+  margin-bottom: 32px;
+}
+
+.gallery-section-heading p {
+  margin-top: 12px;
+}
+/* Premium gallery section heading */
+.gallery-section-heading span {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #0783d1;
+  margin-bottom: 10px;
+}
+
+.gallery-section-heading h2 {
+  font-size: 38px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: #0b477c;
+  margin: 0;
+}
+
+.gallery-section-heading p {
+  max-width: 650px;
+  margin: 14px auto 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #64748b;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./PartnerWithUs.css";
 
 function PartnerWithUs() {
   return (

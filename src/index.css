@@ -35124,7 +35124,7 @@ button span {
 }
 
 .partner-with-us-hero .partner-hero-content h1 {
-  font-size: clamp(44px, 4.7vw, 64px);
+  font-size: clamp(42px, 4.3vw, 58px);
   line-height: 0.99;
   letter-spacing: -0.048em;
 }
@@ -35132,12 +35132,12 @@ button span {
 .partner-with-us-hero .partner-hero-accent {
   width: 62px;
   height: 4px;
-  margin: 23px 0 19px;
+  margin: 20px 0 18px;
 }
 
 .partner-with-us-hero .partner-hero-content > p {
   max-width: 575px;
-  font-size: 15px;
+  font-size: 15.5px;
   line-height: 1.65;
 }
 
@@ -35151,7 +35151,7 @@ button span {
 
 .partner-with-us-hero .partner-hero-highlights > div {
   padding: 8px 12px;
-  font-size: 11px;
+  font-size: 11.5px;
 }
 
 .partner-with-us-hero .partner-hero-highlights b {
@@ -35164,7 +35164,8 @@ button span {
 /* ---------- BUTTON ---------- */
 
 .partner-with-us-hero .partner-hero-btn {
-  margin-top: 26px;
+  margin-top: 8px;
+  transform: translateY(-28px);
   padding: 14px 20px;
   gap: 22px;
   font-size: 13px;
@@ -35448,7 +35449,7 @@ button span {
 ========================================================= */
 
 .partner-with-us-hero {
-  min-height: 730px !important;
+  min-height: 690px !important;
   padding-bottom: 55px !important;
   box-sizing: border-box;
 }
@@ -35465,7 +35466,7 @@ button span {
 /* LEFT SIDE — slightly tighter */
 
 .partner-with-us-hero .partner-hero-content {
-  transform: translateY(-4px);
+  transform: translateY(-28px);
 }
 
 .partner-with-us-hero .partner-hero-content h1 {
