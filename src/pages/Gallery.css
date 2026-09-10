@@ -1062,3 +1062,181 @@
   line-height: 1.7;
   color: #64748b;
 }
+/* =========================================================
+   GALLERY HERO — FINAL MOBILE RESPONSIVE FIX
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .gallery-hero {
+    min-height: 360px !important;
+    padding: 55px 20px 45px !important;
+    overflow: hidden !important;
+  }
+
+  .gallery-hero .gallery-container {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* TEXT stays clearly on the left */
+  .gallery-hero .gallery-container > * {
+    position: relative;
+    z-index: 5;
+  }
+
+  .gallery-hero h1 {
+    width: 62% !important;
+    max-width: 62% !important;
+    margin: 0 0 14px !important;
+    font-size: 34px !important;
+    line-height: 1.02 !important;
+    position: relative !important;
+    z-index: 6 !important;
+  }
+
+  .gallery-hero p {
+    width: 60% !important;
+    max-width: 60% !important;
+    margin: 0 !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    position: relative !important;
+    z-index: 6 !important;
+  }
+
+  .gallery-eyebrow {
+    position: relative !important;
+    z-index: 6 !important;
+  }
+
+  /* FEMALE — right side, behind text */
+  .gallery-hero-image {
+    position: absolute !important;
+    top: 0 !important;
+    right: -5px !important;
+    bottom: 0 !important;
+    left: auto !important;
+
+    width: 48% !important;
+    height: 100% !important;
+
+    transform: none !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+  }
+
+  .gallery-hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+  }
+
+  /* Keep decorative elements behind everything */
+  .gallery-hero::before,
+  .gallery-hero::after {
+    z-index: 0 !important;
+  }
+
+  .gallery-hero-dots {
+    z-index: 1 !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .gallery-hero {
+    min-height: 350px !important;
+    padding: 52px 18px 42px !important;
+  }
+
+  .gallery-hero h1 {
+    width: 63% !important;
+    max-width: 63% !important;
+    font-size: 31px !important;
+  }
+
+  .gallery-hero p {
+    width: 61% !important;
+    max-width: 61% !important;
+    font-size: 10.5px !important;
+  }
+
+  .gallery-hero-image {
+    width: 46% !important;
+    right: -4px !important;
+  }
+}
+/* =========================================================
+   GALLERY MOBILE — FEMALE IMAGE FINAL SIZE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .gallery-hero-image {
+    width: 56% !important;
+    height: 70% !important;
+    right: -8px !important;
+    bottom: 0 !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  .gallery-hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: right bottom !important;
+  }
+}
+/* =========================================================
+   GALLERY FILTERS — FINAL MOBILE OVERFLOW FIX
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .gallery-filters {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    padding: 3px 2px 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    gap: 8px !important;
+
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-filters::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .gallery-filter {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    min-width: max-content !important;
+    box-sizing: border-box !important;
+  }
+}
+

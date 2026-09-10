@@ -490,6 +490,28 @@ function Navbar() {
             >
               Contact
             </a>
+                        {/* LOGIN */}
+
+            <Link
+              to="/login"
+              onClick={() =>
+                setMobileMenuOpen(false)
+              }
+            >
+              Login
+            </Link>
+
+
+            {/* REGISTER */}
+
+            <Link
+              to="/register"
+              onClick={() =>
+                setMobileMenuOpen(false)
+              }
+            >
+              Register
+            </Link>
 
           </div>
         )}
