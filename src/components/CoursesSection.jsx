@@ -9,7 +9,7 @@ const courses = [
     duration: "12 Months",
     modules: "6 Modules",
     price: "₹10000",
-    image: "/courses/dca.jpg",
+    image: "/courses/home-popular/dca.jpg",
   },
   {
     category: "COMPUTER",
@@ -19,7 +19,7 @@ const courses = [
     duration: "12 Months",
     modules: "6 Modules",
     price: "₹12000",
-    image: "/courses/adca.jpg",
+    image: "/courses/home-popular/adca.jpg",
   },
   {
     category: "ACCOUNTING",
@@ -29,7 +29,7 @@ const courses = [
     duration: "06 Months",
     modules: "6 Modules",
     price: "₹6000",
-    image: "/courses/tally.jpg",
+    image: "/courses/home-popular/tally_champion.jpg",
   },
   {
     category: "ACCOUNTING",
@@ -39,7 +39,7 @@ const courses = [
     duration: "06 Months",
     modules: "6 Modules",
     price: "₹6000",
-    image: "/courses/dfa.jpg",
+    image: "/courses/home-popular/dfa.jpg",
   },
   {
     category: "ACCOUNTING",
@@ -49,7 +49,7 @@ const courses = [
     duration: "12 Months",
     modules: "6 Modules",
     price: "₹12000",
-    image: "/courses/adfa.jpg",
+    image: "/courses/home-popular/adfa.jpg",
   },
   {
     category: "COMPUTER",
@@ -59,7 +59,7 @@ const courses = [
     duration: "06 Months",
     modules: "6 Modules",
     price: "₹7000",
-    image: "/courses/dcia.jpg",
+    image: "/courses/home-popular/dcia.jpg",
   },
 ];
 

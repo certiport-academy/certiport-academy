@@ -3,58 +3,64 @@ import learnerImage from "../assets/learner.png";
 
 const testimonials = [
   {
-    name: "Rahul Sharma",
+    name: "Akriti Mishra",
     course: "ADCA Student",
     initials: "RS",
     rating: "5.0",
     review:
       "The course content is practical and easy to understand. The learning experience helped me improve my computer skills with confidence.",
     color: "blue",
+    image: "/testimonials/akriti.jpg",
   },
   {
-    name: "Priya Verma",
+    name: "Rupali Singh",
     course: "Tally Champion Student",
     initials: "PV",
     rating: "5.0",
     review:
       "The accounting and GST training was very useful. The practical approach made the concepts much easier to understand.",
     color: "pink",
+    image: "/testimonials/rupali.jpg",
   },
   {
-    name: "Amit Kumar",
-    course: "DCA Student",
+    name: "Heena Rawat",
+    course: "Tally Prime Student",
     initials: "AK",
     rating: "4.9",
     review:
       "I really liked the structured learning approach and assessment system. It gave me a better understanding of the skills I was learning.",
     color: "green",
+    image: "/testimonials/heena.jpg",
   },
   {
-    name: "Neha Singh",
-    course: "DFA Student",
+    name: "Nisha Chouhan",
+    course: "Tally Champion Student",
     initials: "NS",
     rating: "5.0",
     review:
       "The practical learning approach helped me understand computer applications much better and improved my confidence.",
     color: "purple",
+    image: "/testimonials/nisha.jpg",
   },
   {
-    name: "Vikas Kumar",
-    course: "Tally Prime Student",
+    name: "Sakshi Kumari",
+    course: "ADCA Student",
     initials: "VK",
     rating: "4.9",
     review:
       "The training was well structured and the practical examples made accounting and GST concepts easier to learn.",
     color: "orange",
+    image: "/testimonials/Sakshi.jpg",
   },
   {
-    name: "Anjali Gupta",
-    course: "DCA Student",
+    name: "Shagun Rathore",
+    course: "Tally Champion Student",
     initials: "AG",
     rating: "5.0",
     review:
       "The learning environment was excellent. The course content and assessment system made my learning journey very effective.",
     color: "cyan",
+    image: "/testimonials/shagun.jpg",
   },
 ];
 
@@ -196,10 +202,13 @@ function TestimonialsSection() {
                   <div className="testimonial-student">
 
                     <div
-                      className={`testimonial-photo testimonial-photo-${item.color}`}
-                    >
-                      {item.initials}
-                    </div>
+  className={`testimonial-photo testimonial-photo-${item.color}`}
+>
+  <img
+    src={item.image}
+    alt={item.name}
+  />
+</div>
 
                     <div className="testimonial-student-info">
 
